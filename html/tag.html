@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>제목</h1>
+    <h2>오늘의 일기</h2>
+    <h3>h3입니다</h3>
+    <p>오늘은 날씨가 좋았다.
+        <br/>
+        첫 번째 html 수업을 했다.
+    </p>
+
+    <hr/>
+    <h4>오늘의 할일</h4>
+    <!-- ul type의 속성값
+        - disc(기본값, default)
+        - square
+        - circle
+        - none
+     -->
+    <ul type="">  <!--순서 없는 리스트-->
+        <li>html 복습하기</li>
+        <li>맛집 찾기</li>
+        <li>운동 하기</li>
+    </ul>
+
+    <!-- ul type의 속성값
+        1(기본값), A, a, I, i
+     -->
+    <h4>아메리카노 만드는 법</h4>  <!--순서 있는 리스트-->
+    <ol type="">
+        <li><b>물</b>을 <strong>넣는다.</strong></li>
+        <li><i>얼음</i>을 <em>넣는다.</em></li>
+        <li><del>에스프레소</del> <u>샷</u>을 &nbsp;넣는다.</li>
+    </ol>
+
+    <!-- 리스트 안에 리스트 넣기 -->
+    <h5>내가 좋아하는 음식</h5>
+    <ul>
+        <li>양식
+            <ol>
+                <li>감바스</li>
+                <li>스테이크</li>
+            </ol>
+        </li>
+        <li>한식
+            <ol>
+                <li>비빔밥</li>
+                <li>치킨</li>
+            </ol>
+        </li>
+        <li>일식
+            <ol>
+                <li>우동</li>
+                <li>초밥</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- details & summary tag -->
+    <details>
+        <summary>제목</summary>
+        <ul>
+            <li>아무태그나</li>
+            <li>넣어도 됨</li>
+        </ul>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt iure vel adipisci dignissimos illo ipsam explicabo optio, minus voluptatibus aspernatur alias delectus ipsa eos fugit, voluptatem enim nostrum, assumenda quisquam?</div>
+    </details>
+
+
+    <h3>img & a 태그</h3>
+    <!-- img 속성
+        - src: 이미지 경로
+        - alt: 이미지 설명
+     -->
+
+     <!-- a 태그 속성
+        - href: 이동 경로
+        - target: 웹 페이지가 열릴 위치
+        - title: a 태그에 대한 설명(커서 올리면 설명이 나타남)
+     -->
+
+     <img src="https://www.ui4u.go.kr/depart/img/content/sub03/img_con03030100_01.jpg" 
+     alt="강아지 사진" width="300"/>
+    <br/>
+     <!-- 절대경로: 상단의 폴더부터 차례대러 경로를 찾는 것 -->
+     <img src="/html/img/고양이.jpg" alt="고양이 사진" width="200"/>
+     <br/>
+     <!-- 상대경로(추천): 현재 위치로부터 경로를 찾는 것 -->
+     <img src="./img/고양이.jpg" alt="고양이" width="100"/>
+
+    <br/>
+    <a href="https://www.naver.com/" target="_self" title="마우스 커서 올리면 나타남">네이버로 이동</a>
+    <br/>
+    <a href="./test/practice01.html">카페메뉴(절대)</a>
+    <br/>
+    <a href="../html/test/practice01.html">카페메뉴(상대)</a>
+    <br/>
+    <br/>
+    <!--사진 누르면 구글로 연결 -->
+    <a href="https://www.google.co.kr/?hl=ko"> <img src="/html/img/구글.png" alt="구글" width="200"> </a>
+
+    
+
+
+</body>
+</html>

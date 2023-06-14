@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        text <input type="text"/><br/>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="이메일 형식"/><br/>
+        <label>
+            비밀번호
+            <input type="password" placeholder="비밀번호"/>
+        </label>
+        <br/>
+        password <input type="password"/>
+        <br/>
+        숫자<input type="number"/> <br/>
+        <input type="color"/> <br/>
+        <input type="range"/> <br/>
+        <input type="file"/> <br/>
+        <input type="date"/> <br/>
+
+        <input type="button" value="버튼"> <br/>  <!--그냥 버튼(폼 제출X)-->
+        <input type="submit" value="버튼"> <br/> <!--새로고침됨, 폼 제출(서버로 전송)-->
+        <button>버튼</button>  <br/> <!--새로고침됨, 폼 제출(서버로 전송)-->
+        
+        <!-- radio와 checkbox -->
+        <h5>다음 중 img 태그의 속성인 것은?(하나만 고르시오)</h5>
+        <input type="radio" name="radio"/> title
+        <input type="radio" name="radio"/> value
+        <input type="radio" name="radio"/> alt
+        <input type="radio" name="radio"/> mouse
+
+        <h5>다음 중 input 태그의 속성이 아닌 것은?(모두 고르시오)</h5>
+        <input type="checkbox" name="checkbox" id="text"/> <label for="text">text</label>
+        <input type="checkbox" name="checkbox" id="img"/> <label for="img">img</label>
+        <input type="checkbox" name="checkbox" id="click"/> <label for="click">click</label>
+        <input type="checkbox" name="checkbox" id="date"/> <label for="date">date</label>
+        <br/>
+
+        <!-- select -->
+        <select>
+            <optgroup label="라지">
+                <option>XXL</option>
+                <option>XL</option>
+                <option>L</option>
+            </optgroup>
+            <optgroup label="스몰">
+                <option>S</option>
+                <option>XS</option>
+                <option>XXS</option>
+            </optgroup>
+        </select>
+        <br/>
+
+        <!-- 강의자료없음 -->
+        <textarea cols="30" rows="10" placeholder="하고 싶은 말을 써주세요"></textarea>
+
+
+    </form>
+
+</body>
+</html>
