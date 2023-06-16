@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자1 - 기본선택자</title>
+    <style>
+        /* 전체선택자 */
+        *{
+            color: #ddd
+        }
+
+        /* 태그선택자 */
+        h3{
+            background-color: #000;
+            color: white;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+
+        li{
+            background-color: aquamarine;
+            color: royalblue;
+        }
+
+        span{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        /* 클래스 선택자*/
+        .small{
+            background-color: pink;
+        }
+
+        .big{
+            background-color: orange;
+        }
+
+        /* id 선택자 */
+        #text{
+            background-color: skyblue;
+            color: black;
+        }
+
+        /* 선택자 우선순위
+            - id > class > tag
+         */
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="small">쥐</li>
+        <li class="big">소</li>
+        <li class="big">사자</li>
+        <li class="small">토끼</li>
+
+        <h3>태그 선택자</h3>
+        <span id="text">span tag</span>
+
+    </ul>
+</body>
+</html>

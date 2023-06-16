@@ -1,0 +1,52 @@
+section{
+    border: 1px solid blue;
+}
+
+article{
+    height: 100px;
+    border: 1px solid salmon;
+}
+
+/* 직계 자식 선택자(>) */
+.first > h3{
+    color: #fff;
+    text-align: center;
+    background-color: blue;
+}
+
+.second > h3{
+    color: midnightblue;
+    background-color: beige;
+}
+
+/* 후손 선택자(띄어쓰기) */
+.first li{
+    font-size: 10px;
+}
+ 
+.first > article > ul > li{
+    font-size: 10px
+}
+/* 위에꺼랑 같은 의미! */
+
+/* 인접 형제 선택자 */
+#fairy-tale + li{
+    background-color: aqua;
+    color: brown;
+}
+/* 위의 경우는 id가 fariy-tale인 부분의 바로 다음이 li일 경우 적용함
+(가장 먼저 나오는 li를 선택하는 것이 아님/ 그래서 중간에 span 들어가면 적용 X) */
+
+#fairy-tale ~ li{
+    background-color: red;
+    color: white;
+}
+/* 위의 경우는 id가 fairy-tale인 부분 다음에 오는 것들 중 li에 해당하는 것 적용 */
+
+/* 일치 선택자 (해당요소.id이름 or 요소#클래스이름)*/
+article.first{
+    
+}
+
+
+

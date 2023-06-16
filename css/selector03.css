@@ -1,0 +1,43 @@
+.div1{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: skyblue;
+    line-height: 100px;
+}
+
+/* 가상 클래스 선택자
+- hover, active, visited, focus, checked
+    - E:hover{} : 요소에 마우스가 올라가 있는 동안
+    - E:active{} : 요소에 마우스클릭 or 엔터가 눌리는 동안
+    - E:focus{} : 요소에 포커스가 머물러 있는 동안(input에 사용!)
+    - E:visited{} : 요소가 링크일 때(a 태그), 방문했다면 스타일 변경
+    - E:checked{} : 요소가 체크되었을 때(radio, checkbox)
+*/
+
+.div1:hover{
+    background-color: yellow;
+    height: 150px;
+}
+
+.div1:active{
+    background-color: orange;
+    width: 150px;
+}
+
+input:focus{
+    background-color: blueviolet;
+    color: white;
+    outline-color: aqua;
+}
+
+a:visited{
+    color: #ccc;
+}
+
+input#rabbit:checked + label{
+    background-color: pink;
+    color: white;
+}
+/* id가 rabbit인 것을 선택했다면 그 다음줄에 있는 label에 적용해라 */
+
