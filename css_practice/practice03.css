@@ -1,0 +1,27 @@
+h3:hover{
+    color: blueviolet;
+    background-color: azure;
+}
+
+textarea:focus{
+    background-color:skyblue;
+
+}
+
+#red:checked + label{
+    background-color: red;
+}
+
+#blue:checked + label{
+    background-color: blue;
+}
+
+#yellow:checked + label{
+    background-color: yellow;
+}
+
+
+button:active{
+    background-color:rgb(240, 153, 82);
+    color: white;
+}
