@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        [disabled]{
+            background-color: red;
+        }
+
+        [placeholder]{
+            background-color: aqua;
+        }
+
+        [type="password"]{
+            font-size: 50px;
+        }
+
+        .square{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 위에 .square랑 똑같지만 비추천!! */
+        [class="square"]{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="text1">
+    <input type="text" placeholder="text2">
+    <input type="text" disabled placeholder="text3">
+    <input type="password">
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+</body>
+</html>

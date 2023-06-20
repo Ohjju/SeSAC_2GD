@@ -41,3 +41,63 @@ input#rabbit:checked + label{
 }
 /* id가 rabbit인 것을 선택했다면 그 다음줄에 있는 label에 적용해라 */
 
+
+
+/*  - E: first:child{}: E가 첫번째 자식이라면 선택
+    - E: last-child{}: E가 마지막 자식이라면 선택
+    - E: nth-child{}: E가 n번째 자식이라면 선택
+    - E: nth-of-type{}: E요소 중에 n번째를 선택
+    - E: not(XYZ){}: XYZ가 아닌 E요소를 선택
+*/
+
+.zoo > *{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+
+}
+
+/* 첫번쨰 태그가 li이기 떄문에 검정 적용됨 */
+.zoo > li:last-child{
+    background-color: black;
+}
+
+/* 노랑은 적용 안됨 */
+.zoo > li:first-child{
+    background-color: yellow;
+}
+
+/* li태그 중 첫번쨰를 고름 */
+.zoo > li:nth-of-type(1){
+    background-color: blue;
+}
+
+/* 전체 중 가장 첫번째 자식 */
+.zoo > *:first-child{
+    background-color: yellowgreen;
+
+}
+
+.zoo > li:nth-child(2n+1){
+    background-color: pink;
+}
+
+/* 가상 요소 선택자 */
+/* ::after, ::before */
+
+.h3{
+    background-color: yellow;
+}
+
+.h3::after{
+    content: " after";
+    color: gray;
+}
+
+.h3::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 50px;
+    background-color: red;
+}

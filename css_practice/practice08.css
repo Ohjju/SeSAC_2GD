@@ -1,0 +1,8 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    margin: calc(50% - 50px) auto;
+    /* margin 단축속성 이용 */
+}

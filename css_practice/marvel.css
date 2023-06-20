@@ -1,0 +1,21 @@
+*{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+}
+
+table > tbody > tr > td:first-child{
+    color: green;
+    font-size: 32px;
+
+}
+
+table > tbody > tr:first-child{
+    color: red;
+    font-size: 30px;
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 기본 속성(박스모델)</title>
+    <link rel="stylesheet" href="./attribute02.css">
+</head>
+<body>
+    <h2>display 속성</h2>
+    <!-- div는 자동 줄바꿈되어있음 -->
+    <div class="d-block">block 1</div>
+    <div class="d-block">block 2</div>
+    <div class="d-block">block 3</div>
+    <div class="d-block">block 4</div>
+    <br/>
+
+    <!-- span은 옆으로 붙어있음 -->
+    <span class="d-inline">inline 1</span>
+    <span class="d-inline">inline 2</span>
+    <span class="d-inline">inline 3</span>
+    <span class="d-inline">inline 4</span>
+    <br>
+    <br>
+    <!-- inline, block 둘다 -->
+    <span class="d-inline-block">inline-block 1</span>
+    <span class="d-inline-block">inline-block 2</span>
+    <span class="d-inline-block">inline-block 3</span>
+    
+    <hr/>
+    <h2>max-width, min-width</h2>
+    <div class="parent">
+        <div class="min"></div>
+        <div class="max"></div>
+    </div>
+
+    <hr/>
+    <h2>단위</h2>
+    <div class="box box-px">px</div>
+    <div class="box box-view">viewpoint</div>
+    <div class="box box-per">percent</div>
+
+    <div class="rem">rem
+        <div class="rem">rem
+            <div class="rem">rem</div>
+        </div>
+    </div>
+
+    <div class="em">em
+        <div class="em">em
+            <div class="em">em</div>
+        </div>
+    </div>
+
+    <hr/>
+    <h2>Border-radius</h2>
+    <div class="square rounded"></div>
+
+    <hr/>
+    <h2>box-sizing</h2>
+    <div class="square box-sizing content-box"></div>
+    <div class="square box-sizing border-box"></div>
+
+    <hr/>
+    <h2>opacity</h2>
+    <div class="square">original</div>
+    <div class="square d-none">d-none</div> 
+    <div class="square invisible">invisible</div> 
+    <div class="square opacity-0">opacity-0</div> 
+    <div class="square">original</div>
+    <br/><br/><br/>
+    <!-- 실습 -->
+    <div class="square2 practice">실습 요소 사라지게 하기</div>
+
+    <hr/>
+    <h2>overflow</h2>
+    <div class="square overflow-hidden">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis sint?</p>
+        <img src="./img/pooh.png" alt="푸">
+    </div>
+    <div class="square overflow-auto"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis sint?</p>
+        <img src="./img/pooh.png" alt="푸">
+    </div>
+    <div class="square overflow-scroll"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis sint?</p>
+        <img src="./img/pooh.png" alt="푸">
+    </div>
+    <div class="square overflow-visible"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis sint?</p>
+        <img src="./img/pooh.png" alt="푸">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* 가로 세로 모두 적용됨, 세로로 쌓임*/
+.d-block{
+    display: block;
+    background-color: blueviolet;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    margin: 20px;
+}
+
+/* 가로세로 적용 안됨 */
+.d-inline{
+    display: inline;
+    background-color: yellow;
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    margin: 20px;
+}
+
+/* 가로세로 적용됨, 가로로 쌓임 */
+.d-inline-block{
+    display: inline-block;
+    background-color: blanchedalmond;
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    margin: 20px;
+}
+
+/* min & max */
+.parent{
+    width: 400px;
+    height: 200px;
+    background-color: oranges;
+}
+
+.parent .min{
+    min-width: 400px;
+    background-color: red;
+    height: 100px;
+}
+
+.parent .max{
+    max-width: 400px;
+    background-color: green;
+    height: 100px;
+}
+
+.box{
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+
+}
+
+/* 뷰포터 너비의 백분율 */
+.box-view{
+    width: 50vw;
+    height: 50vh;
+}
+
+/* 부모크기에 비례 */
+.box-per{
+    width: 50%;
+    height: 50%;
+}
+
+/* 32px=2rem */
+.rem{
+    font-size: 2rem;
+}
+
+/* 첫번쨰는 32px - 64px -128px  부모의 크기를 받아옴*/
+.em{
+    font-size: 2em;
+}
+
+.square{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.rounded{
+    border-radius: 50px;
+    border-radius: 10%;
+
+    /* 단축속성*/
+    border-radius: 5px 40px;
+    border-radius: 5px 20px 40px;
+}
+
+.box-sizing{
+    padding: 20px;
+    border: 15px solid red;
+    background-color: tomato;
+}
+
+/* padding 크기까지 더해진 크기 */
+.content-box{
+    /* 기본값! */
+    box-sizing: content-box;
+}
+
+/* 100px 그대로 */
+.border-box{
+    box-sizing: border-box;
+}
+
+/*속성과 자리 모두 사라짐*/
+.d-none {
+    display: none;
+    background-color: red;
+}
+
+/*자리는 남고 속성은 없어짐 - 그래서 커서 가져가면 손모양 없음(sqaure애 cursor속성)*/
+.invisible {
+    visibility: hidden;
+    background-color: orangered;
+}
+
+/* 자리도 남아있고 커서가져가면 손모양 있음, 속성도 있는 상태 */
+.opacity-0 {
+    opacity: 0;
+    background-color: tomato;
+}
+
+/* 실습 */
+.square2{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+
+}
+
+.practice:hover{
+    opacity: 0;
+}
+
+
+.square img[alt="푸"]{
+    width: 200px;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-auto{
+    overflow:auto;
+    /* 넘칠떄만 스크롤 생성 */
+}
+.overflow-scroll{
+    overflow: scroll;
+}
+.overflow-visible{
+    overflow: visible;
+}

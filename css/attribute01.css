@@ -1,0 +1,48 @@
+/* font-family: 'Moirai One', cursive; 
+글꼴 여러개 사용가능!!*/
+.font-link{
+    font-family: 'Moirai One', cursive;
+
+}
+
+/* import방식은 css안에 쓰기 
+font-family: 'Grandiflora One', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+.font-import{
+    font-family: 'Grandiflora One', serif;
+}
+
+
+/* 눈누는 import방식만 사용 */
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.noonnu-font{
+    font-family: 'PyeongChangPeace-Bold',serif;
+}
+
+
+.google{
+    font-family: 'Bagel Fat One', cursive;
+}
+
+.container{
+    width: 500px;
+    background-color: aliceblue;
+}
+
+.sentences{
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: line-through;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

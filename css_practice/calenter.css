@@ -1,0 +1,60 @@
+body{
+    background-color:rgb(255, 241, 202);
+    font-size: 13px;
+}
+
+h4{
+    color: green;
+    text-align: center;
+    font-size: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+/* tbody가 숨겨져 있음 */
+table > tbody >  tr{
+    text-align: right;
+}
+
+table > tbody >  tr:first-child{
+    font-weight: bold;
+    text-align: center;
+}
+
+table > tbody > tr > td:nth-of-type(1){
+    color: red;
+}
+
+table > tbody > tr > th:nth-of-type(1){
+    color: red;
+}
+
+.holiday{
+    color: red;
+}
+
+/* 위에 이렇게 한번에 쓰기 가능!!(,로 연결)
+table tr th:first-child,
+table tr td:first-child
+table tr td.holiday{
+    color: red
+ */
+
+
+table > tbody > tr > td:nth-of-type(7){
+    color: blue;
+}
+
+table > tbody > tr > th:nth-of-type(7){
+    color: blue;
+}
+
+/* 7보다는 last로 하는 거 추천
+table tbody tr > td:last-child,
+table tbody tr > th:last-child{
+    color: blue;
+}
+*/
+
