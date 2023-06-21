@@ -1,0 +1,73 @@
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.circle {
+  position: relative;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.circle1 {
+  position: absolute;
+  background-color: blue;
+  top: 210px;
+  left: 50px;
+}
+
+.eye1 {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  border-radius: 20px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.eye2 {
+  position: absolute;
+  top: 10px;
+  border-radius: 11px;
+  background-color: black;
+  width: 22px;
+  height: 22px;
+}
+
+.circle2 {
+  position: absolute;
+  background-color: rgb(47, 47, 214);
+  top: 50px;
+  left: 50px;
+}
+
+.circle3 {
+  position: absolute;
+  background-color: rgb(79, 79, 228);
+  top: 50px;
+  left: 40px;
+}
+
+.circle4 {
+  position: absolute;
+  background-color: rgb(85, 144, 255);
+  top: 60px;
+  left: 40px;
+}
+
+.circle5 {
+  position: absolute;
+  background-color: #a3d2fd;
+  top: 40px;
+  left: 60px;
+  z-index: 15;
+}
+
+img {
+  top: 400px;
+  position: absolute;
+  z-index: 10;
+}

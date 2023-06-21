@@ -1,0 +1,44 @@
+.container {
+  background-color: beige;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+  /* 부모는 주로 relative를 많이 사용함 - 문서흐름을 해치지 않기 때문 */
+}
+
+.item1 {
+  background-color: hotpink;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 50px;
+  top: 30px;
+}
+
+/* 
+item 애들 한번에 크기 설정해주기
+    .container div{
+    width: 100px;
+    height: 100px;
+    }
+*/
+
+.item2 {
+  background-color: rgb(252, 164, 208);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 30px;
+  bottom: 100px;
+}
+
+.item3 {
+  background-color: rgb(253, 212, 232);
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  right: 100px;
+  top: 100px;
+}

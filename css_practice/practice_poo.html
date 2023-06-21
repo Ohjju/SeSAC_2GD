@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        background: linear-gradient(
+          60deg,
+          yellow,
+          30%,
+          rgb(255, 45, 150),
+          55%,
+          rgb(161, 50, 252)
+        );
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+      }
+      .pooh {
+        position: absolute;
+        width: 465px;
+        height: 465px;
+        border-radius: 240px;
+        top: 18px;
+        left: 18px;
+        margin: auto;
+        background-color: white;
+        background-image: url("/css/img/pooh.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 8px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="pooh"></div>
+    </div>
+  </body>
+</html>

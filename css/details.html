@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details와 summary 태그 css 적용</title>
+    <style>
+      /* COMMON하게 만든것 - detail태그안에 있는 것뿐만 아니라 모든 li에 동일하게 적용한다는 말 */
+      li {
+        list-style: none;
+      }
+      /* details 태그 */
+      details ul {
+        margin: 0;
+      }
+      /* 삼각형 가리킴 */
+      details summary::marker {
+        /* font-size: 50px; */
+        /* 삼각형 안보이게 하고 싶을때 fontsize 0말고 content 사용해도 됨 */
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z'/%3E%3C/svg%3E");
+      }
+
+      /* detail이면서 open속성을 가질때 */
+      details[open] summary::marker {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 576 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M352 144c0-44.2 35.8-80 80-80s80 35.8 80 80v48c0 17.7 14.3 32 32 32s32-14.3 32-32V144C576 64.5 511.5 0 432 0S288 64.5 288 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H352V144z'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body>
+    <details>
+      <summary>제목</summary>
+      <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+      </ul>
+    </details>
+  </body>
+</html>

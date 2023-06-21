@@ -9,6 +9,7 @@
     margin: 20px;
 }
 
+
 /* 가로세로 적용 안됨 */
 .d-inline{
     display: inline;
@@ -19,6 +20,7 @@
     padding: 30px;
     margin: 20px;
 }
+
 
 /* 가로세로 적용됨, 가로로 쌓임 */
 .d-inline-block{
