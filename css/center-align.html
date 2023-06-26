@@ -31,6 +31,33 @@
         top: 0;
         bottom: 0;
       }
+
+      /* flex 이용한 가운데 정렬 */
+      .parent2 {
+        display: flex;
+        justify-content: center;
+        /* 가로정렬 */
+        align-items: center;
+        /* 세로정렬 */
+      }
+
+      .parent2 > .child {
+        /* 딱히 줄 게 없음 */
+      }
+
+      /* position & transform */
+      .parent3 {
+        position: relative;
+      }
+
+      .parent3 > .child {
+        position: absolute;
+        /* 왼쪽 꼭짓점이 정확히 중앙으로 감(사각형 자체가 아니라) -> 그래서 후에 조정 필요 */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* 여기서 -50%는 분홍색 상자 기준 이동임 */
+      }
     </style>
   </head>
 

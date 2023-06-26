@@ -1,0 +1,88 @@
+/* transition vs. animation
+    - transiiton
+        - hover, onlink, active 등의 이벤트에 의해 발생됨
+    - animation
+        - 중간 스텝을 지정하여 보다 세밀한 스타일 전환 가능
+       - keyframes 활용
+*/
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: relative;
+  animation-name: box;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+}
+
+@keyframes box {
+  0% {
+    left: 0px;
+  }
+
+  25% {
+    left: 100px;
+  }
+  /* 그냥 100, 200px 이동하는게 아니라 0%일때를 기준으로 100, 200만큼 이동하는 것 */
+  50% {
+    left: 200px;
+  }
+  /* 그래서 75%일때는 0% 기준에서 100px만큼 가므로 다시 돌아오는 것 */
+  75% {
+    left: 100px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.ball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: black;
+
+  /* 단축속성*/
+  animation: bounce1 1s ease-out infinite alternate;
+}
+
+@keyframes bounce1 {
+  to {
+    top: 0px;
+  }
+
+  from {
+    top: 300px;
+  }
+}
+
+.ball2 {
+  width: 50px;
+  height: 50px;
+  background-color: chartreuse;
+  position: absolute;
+  left: 200px;
+  border-radius: 50%;
+
+  /* animation */
+  animation: bounce2 1s infinite;
+}
+
+@keyframes bounce2 {
+  to,
+  from {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    background-color: rgb(236, 109, 66);
+  }
+}

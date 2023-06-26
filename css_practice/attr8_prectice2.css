@@ -1,0 +1,24 @@
+@media screen and (max-width: 700px) {
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid red;
+    display: inline-block;
+    /*flex-direction: column으로 해도 됨 => 대신 부모 클래스 만든 후 거기에다가! */
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: skyblue;
+    border: 1px solid red;
+  }
+}

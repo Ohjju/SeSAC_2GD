@@ -1,0 +1,18 @@
+.note {
+  position: relative;
+  animation: move 2s ease infinite;
+  width: 100%;
+}
+
+@keyframes move {
+  0% {
+    left: 100%;
+    /* margin-left:100% */
+    width: 200%;
+  }
+
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
