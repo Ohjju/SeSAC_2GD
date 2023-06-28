@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid areas</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffdfde;
+        display: grid;
+        grid-template-areas:
+          "header1 header2 header3"
+          "nav main aside"
+          "footer1 footer2 footer3";
+        gap: 10px;
+      }
+
+      .item {
+        background-color: #6a7ba2;
+      }
+
+      .item1 {
+        grid-area: header1;
+      }
+
+      .item2 {
+        grid-area: header2;
+      }
+
+      .item3 {
+        grid-area: header3;
+      }
+
+      .item4 {
+        /* grid-area: header2; */
+        /* 이름 붙인 그 위치로 감! - but html이 바뀌는건 아니라 비추천 */
+        grid-area: nav;
+      }
+
+      .item5 {
+        grid-area: main;
+      }
+
+      .item5 {
+        grid-area: aside;
+      }
+
+      .item5 {
+        grid-area: footer1;
+      }
+
+      .item5 {
+        grid-area: footer2;
+      }
+
+      .item5 {
+        grid-area: footer3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">a</div>
+      <div class="item item2">b</div>
+      <div class="item item3">c</div>
+      <div class="item item4">d</div>
+      <div class="item item5">e</div>
+      <div class="item item6">f</div>
+      <div class="item item7">g</div>
+      <div class="item item8">h</div>
+      <div class="item item9">i</div>
+    </div>
+  </body>
+</html>

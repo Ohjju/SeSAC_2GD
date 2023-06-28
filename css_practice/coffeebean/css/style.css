@@ -27,6 +27,12 @@ a {
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 헤더를 위쪽에 고정 */
+  z-index: 999;
+  /* 보통 헤더가 가장 위에 있으므로 크게 주고 시작함 */
   width: 100%;
   border-bottom: 1px solid rgb(238, 238, 238);
   background-color: #fff;
@@ -72,13 +78,26 @@ header .util-menu .inner ul li:last-child a {
 
 /* HEADER main-menu */
 header .main-menu {
+  height: 100px;
 }
 
 header .main-menu .inner {
+  display: flex;
+  /* 로고와 ul메뉴와 서치메뉴를 가로로 */
+  justify-content: space-between;
 }
 
 /* 로고 */
 header .main-menu .inner .logo {
+  width: 100px;
+  /* border: 1px solid #000; */
+  /* 여기서 border가 높이를 주지 않았는대도 부모높이만큼 되어있는 이유는 inner에 display:flex했기 떄문
+  align item이 stretch이기 때문에 높이가 자동으로 부모만큼만 주어짐 */
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  /* 들여쓰기 */
 }
 
 header .main-menu .inner .logo a {
@@ -86,17 +105,54 @@ header .main-menu .inner .logo a {
 
 /* 메뉴 */
 header .main-menu .inner .menu {
+  display: flex;
+  align-items: center;
 }
 
 header .main-menu .inner .menu li {
+  margin: 0 31px 0 32px;
+  /* 공백을 눌렀을때도 클릭이 되게하고 싶으면 padding 아니면 margin */
 }
 
 header .main-menu .inner .menu li a {
+  color: #2f1c11;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+header .main-menu .inner .menu li a:hover {
+  color: #d47632;
 }
 
 /* search */
-.search1 {
+.search {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #d47632;
+  margin-right: 20px;
 }
 
-.search2 {
+.search i :hover {
+  cursor: pointer;
+}
+
+/* main */
+main {
+  margin-top: 140px;
+  /* 사진이 윗부분이 조금 잘려서 마진을 위쪽으로 헤더의 높이만큼 주었다 */
+}
+
+main .summer-new {
+  width: 100%;
+}
+
+main .summer-new a img,
+main .promotion a img {
+  /* img의 block이 inline-block이라서 기본으로 여백생김 */
+  display: block;
+  max-width: 1400px;
+  min-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
