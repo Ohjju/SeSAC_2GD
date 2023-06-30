@@ -20,11 +20,13 @@ header {
   height: 80px;
   box-sizing: border-box;
   position: fixed;
+  z-index: 10;
+  /* z-index 안해주니까 hover 적용이 안됨... 왜 해야할까*/
 }
 
 .header1 {
   display: flex;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   /* absolute 다시 보기 */
   box-sizing: border-box;
@@ -34,7 +36,7 @@ header {
 
 .menu {
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
 }
@@ -60,31 +62,16 @@ header {
 }
 
 .menu5 {
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
   border: 1px solid white;
   box-sizing: border-box;
-  padding: 13px 13px 16px 13px;
+  padding: 15px 17px 15px 17px;
   border-radius: 5px;
 }
 
-.menu1:hover {
-  cursor: pointer;
-  color: #e0d5c5;
-}
-
-.menu2:hover {
-  cursor: pointer;
-  color: #e0d5c5;
-}
-
-.menu3:hover {
-  cursor: pointer;
-  color: #e0d5c5;
-}
-
-.menu4:hover {
+.menu div:hover {
   cursor: pointer;
   color: #e0d5c5;
 }
@@ -105,7 +92,7 @@ header {
 
 .logo {
   color: white;
-  font-size: 36px;
+  font-size: 43px;
   z-index: 10;
   align-items: center;
   position: absolute;
@@ -118,19 +105,19 @@ header {
 
 /* 메인 */
 main {
-  height: 872px;
+  height: 959px;
   width: 100vw;
   background-color: rgb(178, 149, 109);
 }
 
-section {
+.section1 {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   position: relative;
 }
 
-article1 {
+.article1 {
   width: 415.66px;
   height: 100%;
   box-sizing: border-box;
@@ -140,7 +127,7 @@ article1 {
   padding: 0px 0px 0px 30px;
 }
 
-article2 {
+.article2 {
   width: 415.66px;
   height: 100%;
   box-sizing: border-box;
@@ -198,4 +185,60 @@ i {
 i:hover {
   cursor: pointer;
   color: #e0d5c5;
+}
+
+.section2 {
+  width: calc(100vw - 16.5px);
+  /* 커서 넓이만큼 뺴줌, 그냥 화면 가로 너비에 맞게 하는 방법은? */
+  height: 696px;
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+}
+
+.section2 > .article3 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.308);
+  margin: auto;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.section2 > .article4 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+.img1 {
+  height: 200px;
+  width: 200px;
+}
+
+.img2 {
+  height: 500x;
+  width: 600px;
+}
+
+.text2 {
+  width: 100%;
+  color: #543939;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 42px;
+  line-height: 40px;
+}
+.text3 {
+  color: #543939;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.text4 {
+  color: #543939;
+  font-family: "Bacasime Antique", serif;
+  font-size: 18px;
+  line-height: 15px;
 }
