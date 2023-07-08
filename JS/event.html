@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 리스너</title>
+    <script defer src="./event.js"></script>
+    <style>
+      body {
+        height: 2000px;
+        position: relative;
+      }
+      .btn {
+        width: 80px;
+        height: 35px;
+        border-radius: 13px;
+        text-align: center;
+        line-height: 35px;
+        font-weight: 700;
+        margin: 10px;
+        cursor: pointer;
+      }
+      .btn--black {
+        background-color: #2c2c2c;
+        color: #fff;
+      }
+      .btn--green {
+        background-color: #00b600;
+        color: yellow;
+      }
+      .btn--blue {
+        background-color: #4949ff;
+        color: bisque;
+      }
+      .btn--red {
+        background-color: orangered;
+        color: #fff;
+      }
+
+      .pos {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 600px;
+        opacity: 0.3;
+        transition: 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>addEventListener 기본</h3>
+    <div class="btn btn--black">버튼1</div>
+    <div class="btn btn--green">버튼2</div>
+    <div class="btn btn--blue">버튼3</div>
+    <div class="btn btn--red">버튼4</div>
+    <div id="container"></div>
+
+    <h3>window 객체에 scroll 이벤트 적용하기</h3>
+    <div class="pos btn--red">안녕하세요</div>
+
+    <h3>이벤트 객체 확인 & keydown</h3>
+    <input type="text" />
+    <button>click</button>
+
+    <hr />
+    <h3>변경 이벤트</h3>
+    <input type="text" id="change-input" />
+    <div class="box"></div>
+
+    <hr />
+    <h3>폼 이벤트</h3>
+
+    <h5>Todo list</h5>
+    <form id="todo-form">
+      <input type="text" name="todo" />
+      <button>Add</button>
+    </form>
+    <ul class="todos"></ul>
+  </body>
+</html>
