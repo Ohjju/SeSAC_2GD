@@ -71,11 +71,11 @@ console.log(Math.floor(Math.random() * 10));
 // 0.xxx ~ 10.xxx
 console.log(Math.floor(Math.random() * 11));
 
-// 20<= x<=22 정수 20<= x <23
 // 0 ~ 3
 // 0<=x<1
 // 0<=x<3
 console.log(Math.floor(Math.random() * 3));
+// 20<= x<=22 정수 20<= x <23
 console.log(Math.floor(Math.random() * 3) + 20);
 
 // Object

@@ -39,7 +39,7 @@
   </head>
   <body>
     <h1>퀴즈4. HTML 요소 생성/추가하기</h1>
-    <img src="./img/quiz4.png" alt="문제" width="1000" />
+    <img src="./image/quiz4/quiz4.png" alt="문제" width="1000" />
     <!--
       문제
       - 이달의 맛 BEST 9가지를 카드로 생성하려고 합니다.
@@ -68,7 +68,7 @@
       태그를 생성하고, 그 내부를 채우는 작업)을 9번 반복하는 문제입니다.
       <br /><br />
       (힌트) html 구조가 다음과 같아야 합니다. <br />
-      <img src="./img/quiz4-hint.png" alt="보가" width="400" />
+      <img src="./image/quiz4/quiz4-hint.png" alt="보가" width="400" />
     </p>
     <!-- WARNING: HTML 코드 변경 금지!! -->
     <hr />
@@ -76,6 +76,7 @@
     <section class="text-center">
       <!-- 이 곳에 article 태그가 추가되도록! -->
     </section>
+
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
       // (참고) article-box, img-box, text-center 클래스에 대한 스타일시트는 haed > style 태그에 이미 정의되어 있습니다.
@@ -97,10 +98,12 @@
         const img = document.createElement("img");
         const h3 = document.createElement("h3");
         const name = document.createElement("div");
+
         // img 속성 추가 및 CSS 적용(클래스 추가)
-        img.setAttribute("src", `./img/icecream${i + 1}.png`);
+        img.setAttribute("src", `./image/quiz4/icecream${i + 1}.png`);
         img.setAttribute("alt", `icecream${i + 1} 사진`);
         img.classList.add("img-box");
+        //img에 img-box 클래스를 부여함!
         // h3
         h3.textContent = `Top${i + 1}`;
         h3.classList.add("text-center");
@@ -111,6 +114,7 @@
         // append
         article.append(img, h3, name);
         section.append(article);
+        //section안에 article 태그를 추가함
       }
     </script>
   </body>

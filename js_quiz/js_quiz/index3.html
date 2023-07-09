@@ -26,14 +26,39 @@
     </form>
 
     <script>
+      // console.log(document.querySelector("[disabled]").value);
+
       // TODO: practice13_설명.png 이미지의 조건을 만족하는 js 코드 작성
       // cal(), reset() 함수를 미리 정의해두었습니다.
 
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
-      function cal() {}
+      function cal() {
+        let v1 = Number(document.getElementById("value1").value);
+        let v2 = Number(document.getElementById("value2").value);
+        let op = document.getElementById("operator").value;
+
+        let result;
+        if (op === "+") {
+          result = v1 + v2;
+        } else if (op === "-") {
+          result = v1 - v2;
+        } else if (op === "*") {
+          result = v1 * v2;
+        } else if (op === "/") {
+          result = v1 / v2;
+        } else {
+          result = "연산자가 아니에요";
+        }
+        document.getElementById("result").value = result;
+      }
 
       // [초기화] 버튼 클릭시 reset() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
-      function reset() {}
+      function reset() {
+        document.getElementById("value1").value = "";
+        document.getElementById("value2").value = "";
+        document.getElementById("operator").value = "";
+        document.getElementById("result").value = "";
+      }
     </script>
   </body>
 </html>

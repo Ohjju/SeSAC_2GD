@@ -28,6 +28,25 @@
       // - [ ] <li> 태그를 새로 만들고, "아이디 - 댓글내용" 형식이 되도록 설정합니다.
       // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
       // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
+
+      const form = document.querySelector("form");
+      const list = document.querySelector(".comment-list");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //폼이 실제로 제출되지 않음, 새로고침 방지용
+
+        const userId = form.querySelector("#userid");
+        // id는 #, class는 .
+        // const userId = form.querySelector('[name="userid"]');
+        const comment = form.querySelector("#comment");
+
+        const li = document.createElement("li");
+        li.innerHTML = `${userId.value}-${comment.value}`;
+        list.append(li);
+
+        userId.value = "";
+        comment.value = "";
+      });
     </script>
   </body>
 </html>

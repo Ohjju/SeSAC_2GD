@@ -38,7 +38,33 @@
     </div>
 
     <script>
-      // TODO: 문제 조건을 만족하는 js 코드 작성
+      const container = document.querySelector(".container");
+      const spans = document.querySelectorAll("span");
+      // spans = [ <span>감</span>,  <span>삶</span>, <span>가</span>, ...]
+      // 배열로 저장됨!
+      // spans[0].style.color = "blueviolet";
+      // spans[1].style.color = "blueviolet";
+      // spans[2].style.color = "blueviolet";
+      // spans[3].style.color = "blueviolet";
+      // spans[4].style.color = "blueviolet";
+      // spans[5].style.color = "blueviolet";
+
+      // 기본 for문 사용
+      for (let i = 0; i < spans.length; i++) {
+        console.log(spans[i]);
+        spans[i].style.color = "blueviolet";
+        spans[i].style.fontWeight = "bold";
+      }
+
+      // forEach 사용
+      spans.forEach((el) => {
+        console.log(el);
+        // el.setAttribute("style", "color:blueviolet; font-weight:700;");
+        el.style = "color:blueviolet; font-weight:700;";
+      });
+
+      container.style.backgroundColor = "#eee";
+      container.style.textAlign = "center";
     </script>
   </body>
 </html>

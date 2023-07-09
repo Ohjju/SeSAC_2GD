@@ -32,7 +32,7 @@
   </head>
   <body>
     <h1>퀴즈3. Todo List 올바르게 변경하기</h1>
-    <img src="./img/quiz3.png" alt="문제" width="1000" />
+    <img src="./image/quiz3.png" alt="문제" width="1000" />
     <!-- 
       문제
       - [ ] 아래 리스트는 오늘의 투두 리스트입니다. 그런데 완료한 일과 해야할 일 표시가 뒤바뀌었습니다. ("점심 먹기"와 "커피 마시기" 두 가지 일만 현재 완료한 상태입니다.)
@@ -67,6 +67,12 @@
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
       // (참고) done 클래스와 todo 클래스에 대한 스타일시트는 haed > style 태그에 이미 정의되어 있습니다.
+
+      const lis = document.querySelectorAll("li");
+      for (let li of lis) {
+        li.classList.toggle("done");
+        li.classList.toggle("todo");
+      }
     </script>
   </body>
 </html>
