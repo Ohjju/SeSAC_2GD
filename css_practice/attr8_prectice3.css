@@ -25,12 +25,17 @@ header .inner {
 }
 
 /* logo */
-header .inner i {
+header .inner > .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 50px;
+}
+
+/* 메뉴바 */
+header .inner > .menu-bar {
+  display: none;
 }
 
 header .inner .menu {
@@ -40,12 +45,12 @@ header .inner .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   margin: 0 auto;
 }
 
 header .inner .menu li {
   margin: 0 10px;
+  font-weight: bold;
 }
 
 /* 768px보다 작을 때 header */
@@ -53,45 +58,58 @@ header .small-menu {
   display: none;
 }
 
-header .small-menu li {
+header .inner .menu-bar {
   display: none;
 }
 
 /* 미디어 쿼리 작성
 768px 이하일때 */
 @media screen and (max-width: 768px) {
-  header .small-menu {
-    display: block;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: azure;
-  }
-
-  header .small-menu li {
-    display: block;
-    margin: 7px 0;
-  }
-
   header {
     height: 60px;
   }
+
   header .inner .menu {
     display: none;
   }
 
-  header .inner i {
-    width: 100%;
+  header .inner > .logo {
+    font-size: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 60px;
+  }
+
+  /* small menu */
+  header.click {
+    display: block;
+  }
+
+  header .small-menu {
+    display: block;
+  }
+
+  header .small-menu li {
     margin: 0 auto;
-    /* font-size: 30px;
-    left:50%;
-    transform: translate(-50%); */
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: azure;
   }
 
   header .small-menu li:hover {
     color: white;
     background-color: blue;
+  }
+
+  /* 메뉴바 */
+  header .inner > .menu-bar {
+    display: block;
+    color: whitesmoke;
+    font-size: 30px;
+    position: absolute;
+    line-height: 60px;
+    right: 5vw;
+    cursor: pointer;
   }
 }

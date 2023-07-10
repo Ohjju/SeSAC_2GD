@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./index3.js"></script>
+    <style>
+      body {
+        height: 2000px;
+      }
+      .p-msg {
+        cursor: pointer;
+      }
+      .hover {
+        font-size: 20px;
+        background-color: aquamarine;
+        transition: all 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>마우스 이벤트</h3>
+    <p class="p-msg">안녕하세요</p>
+    <ul class="numbers">
+      <li class="num">one</li>
+      <li class="num">two</li>
+      <li class="num">three</li>
+      <li class="num">four</li>
+    </ul>
+    <div class="div-hover">hover</div>
+
+    <hr />
+    <h3>키보드 이벤트</h3>
+    <button>click</button>
+    <input type="text" class="input-key" />
+
+    <hr />
+    <h3>폼 이벤트</h3>
+    <form id="form">
+      <input type="text" id="todo" />
+      <button>제출</button>
+    </form>
+    <ul class="todos"></ul>
+  </body>
+</html>
