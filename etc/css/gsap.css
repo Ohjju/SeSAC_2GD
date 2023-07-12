@@ -1,0 +1,47 @@
+@import url("./normalize.css");
+
+.section1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(skyblue, #ffff004f);
+}
+
+.section1 .cloud {
+  width: 35vw;
+  position: absolute;
+}
+
+.section1 .cloud1 {
+  left: 5vw;
+}
+.section1 .cloud2 {
+  left: 60vw;
+}
+
+.section1 .sea {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.section1 .sun {
+  position: absolute;
+  width: 20vw;
+  top: 10px;
+  right: 2vw;
+}
+
+/*section2*/
+.section2 {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+.section2 div {
+  color: orangered;
+  text-align: center;
+  font: 700 8vw/100vh "serif";
+}

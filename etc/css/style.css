@@ -1,0 +1,14 @@
+@import url("./normalize.css");
+@import url("./reset.css");
+/* 둘 중 하나를 사용함!(둘다 쓰는 건 의미 없음 원하는 것에 따라 사용하면 됨.) */
+@import url("./root.css");
+
+h1 {
+  margin: calc(var(--base-space) * 2) 0;
+  background-color: var(--main-green);
+  color: var(--text-black-600);
+}
+
+h2 {
+  background-color: var(--main-blue);
+}

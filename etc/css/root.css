@@ -1,0 +1,18 @@
+:root {
+  /* color */
+  --main-red: #dc3545;
+  --main-orange: #fd7e14;
+  --main-yellow: #ffc107;
+  --main-green: #20c997;
+  --main-blue: #2200cc;
+  --main-purple: #6610f2;
+
+  /* text */
+  --text-black-800: #080808;
+  --text-black-600: #a8a8a8;
+
+  /* padding */
+  --base-space: 8px;
+
+  /* 그림자색, 각종 테마 색 */
+}

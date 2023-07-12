@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap - grid</title>
+    <!--bootstrap CSS 링크  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- 
+        container 클래스
+        - 기본적인 레이아웃 요소
+        - grid 시스템 사용
+
+        . container
+        . container-fluid : 유동 컨테이너 (viewport 전체 차지)
+     -->
+    <!-- grid의 가장 큰 장점은 반응형이 된다는 것! -->
+    <h1 class="text-center">grid</h1>
+    <h2 class="text-center">container</h2>
+
+    <div class="container bg-danger">container</div>
+    <!-- inner가 있음, 어느 지점만큼 좁아지면 뷰포트에 꽉 채워짐 -->
+    <div class="container-fluid bg-warning">container-fluid</div>
+    <!-- 항상 뷰포트 꽉 채움 -->
+
+    <!-- .container> .row > .col -->
+    <!-- 항상 위의 방식으로 적기 -->
+    <div class="container">
+      <div class="row bg-info">
+        <div class="col">col</div>
+        <div class="col text-bg-secondary">col</div>
+        <div class="col">col</div>
+      </div>
+      <div class="row text-bg-primary mt-1">
+        <!-- .col{col}*6 -->
+        <div class="col bg-danger">col</div>
+        <div class="col bg-warning">col</div>
+        <div class="col bg-success">col</div>
+        <div class="col bg-primary">col</div>
+        <div class="col bg-info">col</div>
+        <div class="col bg-dark">col</div>
+      </div>
+    </div>
+    <br />
+    <!-- col-$ 클래스 작성해보기 -->
+    <div class="container">
+      <div class="row">
+        <!--col-2 : 12기준으로 2씩 가져감  -->
+        <!-- 12를 넘으면 다음 줄로 내려감! (줄바꿈)-->
+        <div class="col-2 bg-danger">col</div>
+        <div class="col-2 bg-warning">col</div>
+        <div class="col-2 bg-success">col</div>
+      </div>
+    </div>
+    <br />
+
+    <!--
+        col-$ : 화면 크기 가장 작을 때(기준) : <= 576px 
+        col-sm-$ : 화면 크기 >= 576px
+        col-md-$ : 화면 크기 >= 768px
+        col-lg-$ : 화면 크기 >= 992px
+        col-xl-$ : 화면 크기 >= 1200px
+     -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8 bg-primary col-md-4 col-lg-10">col</div>
+        <div class="col-4 bg-info col-md-8 col-lg-2">col</div>
+        <!-- md사이즈(768px이상)일때는 4:8, md보다 작을 때는 8:4 -->
+        <!-- lg 사이즈(992px)일때는 10:2 -->
+      </div>
+    </div>
+
+    <br />
+    <!-- 
+        [실습]
+        평소: 768px보다 클때는 1:1:1로 차지하고 있다가
+        786보다 작아지면 두줄로 변경
+            -첫번째 행은 col 하나가 전체 차지
+            -두번째 행은 두 개의 col이 반씩 나눠서(1:1)
+        576보다 작아지면 col 세 개를 세줄로 변경
+    -->
+    <div class="container">
+      <div class="row">
+        <div class="col bg-dark col-12 col-sm-12 col-md-4">col</div>
+        <div class="col bg-primary col-12 col-sm-6 col-md-4">col</div>
+        <div class="col bg-success col-12 col-sm-6 col-md-4">col</div>
+      </div>
+    </div>
+  </body>
+</html>
