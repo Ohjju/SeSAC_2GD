@@ -4,7 +4,7 @@ gsap.from(".box1", {
     start: "top 80%",
     end: "100% 50%",
     scrub: 1,
-    // markers: true,
+    //markers: true,
   },
   y: 800,
   opacity: 0,
@@ -61,7 +61,7 @@ tl.to(".circle1", {
     opacity: 0,
   });
 //create 메소드 사용
-scrollTrigger.create({
+ScrollTrigger.create({
   trigger: "section",
   animation: tl, //타임라인
   start: "top top",
