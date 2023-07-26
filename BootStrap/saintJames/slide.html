@@ -55,7 +55,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="./SaintJames.css" />
+    <link rel="stylesheet" href="./slide.css" />
     <script defer src="./SaintJames.js"></script>
   </head>
 
@@ -121,10 +121,15 @@
             >
               <span class="visually-hidden">Next</span>
             </button>
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="figures">
+            <!-- ul로 사진 옆으로 배열 + 클론해서 추가 + translateX-->
+            <!-- 슬라이드 부분 -->
+            <div class="carousel">
+              <!-- 전체 슬라이드 -->
+              <div class="wrapper">
+                <!-- 보여지는 부분 -->
+                <div class="items">
+                  <!-- 아이템 시작 -->
+                  <div class="c-item">
                     <div class="f f1">
                       <img
                         src="https://cdn.sanity.io/images/c60rax1h/production/eebfadc5552d57ee7c4afb4a3e1a975751492f48-880x1222.png?w=1000&h=1389&q=80&fit=max&auto=format"
@@ -133,9 +138,7 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="figures">
+                  <div class="c-item">
                     <div class="f f2">
                       <img
                         src="https://cdn.sanity.io/images/c60rax1h/production/0cbe71e389385c65fd3d1a064e1830755b18ec14-880x1222.png?w=1000&h=1389&q=80&fit=max&auto=format"
@@ -144,9 +147,7 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="figures">
+                  <div class="c-item">
                     <div class="f f3">
                       <img
                         src="https://cdn.sanity.io/images/c60rax1h/production/6c410d8e1417b2bdc2a1dcca1f347562c4e5ea9c-880x1222.png?w=800&h=1111&q=80&fit=max&auto=format"
@@ -155,9 +156,7 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="figures">
+                  <div class="c-item">
                     <div class="f f4">
                       <img
                         src="https://cdn.sanity.io/images/c60rax1h/production/d52f3cbb2051fd39cfd544a1896a6428d1966d6d-880x1222.png?w=800&h=1111&q=80&fit=max&auto=format"
@@ -166,9 +165,7 @@
                       />
                     </div>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="figures">
+                  <div class="c-item">
                     <div class="f f5">
                       <img
                         src="https://cdn.sanity.io/images/c60rax1h/production/6f111ee96c01a436f6e3be2da3af301da516b4a8-800x1111.png?w=800&h=1111&q=80&fit=max&auto=format"

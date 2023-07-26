@@ -97,13 +97,15 @@ section1.addEventListener("mouseleave", function (e) {
 // main 화면 슬라이딩
 const main = document.querySelector("main");
 const sentences = document.querySelector(".sentences");
+const carousel = document.querySelector(".carousel-item");
+
 const s1 = document.querySelector(".sentence1");
 const s2 = document.querySelector(".sentence2");
 const s3 = document.querySelector(".sentence3");
 const s4 = document.querySelector(".sentence4");
 const s5 = document.querySelector(".sentence5");
-const carousel = document.querySelector(".carousel");
 const s = [s1, s2, s3, s4, s5];
+
 const firstSectionColor = [
   "#5D9061",
   "#D26A51",
@@ -112,22 +114,27 @@ const firstSectionColor = [
   "#B2956D",
 ];
 
-// 제품명 화면 바뀔 때마다 바뀜
+// 제품명 화면 바뀔 때마다 바뀌는 효과
 index = 1;
 section1.addEventListener("click", function () {
   if (index <= 4) {
     main.style.backgroundColor = firstSectionColor[index];
     s[index].style.opacity = "1";
     s[index].style.transition = "1s";
+    s[index].style.position = "relative";
+    // absolute로 되어있으면 위치가 아래로 내려감
     s[index - 1].style.opacity = "0";
     s[index - 1].style.transition = "0s";
+    s[index - 1].style.position = "absolute";
     index += 1;
   } else if (index == 5) {
     main.style.backgroundColor = firstSectionColor[0];
     s[0].style.opacity = "1";
     s[0].style.transition = "1s";
+    s[0].style.position = "relative";
     s[4].style.opacity = "0";
     s[4].style.transition = "0s";
+    s[4].style.position = "absolute";
     index = 1;
   }
 });
