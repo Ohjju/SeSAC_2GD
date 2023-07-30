@@ -97,10 +97,7 @@ section1.addEventListener("mouseleave", function (e) {
 // main 화면 슬라이딩
 const main = document.querySelector("main");
 const sentences = document.querySelector(".sentences");
-const carousel = document.querySelector(".carousel");
-const items = document.querySelector(".items");
-const c_item = document.querySelector(".c-item");
-const img = document.querySelector("img");
+const carousel = document.querySelector(".carousel-item");
 
 const s1 = document.querySelector(".sentence1");
 const s2 = document.querySelector(".sentence2");
@@ -117,25 +114,9 @@ const firstSectionColor = [
   "#B2956D",
 ];
 
-const firstSectionImg = [
-  "https://cdn.sanity.io/images/c60rax1h/production/0cbe71e389385c65fd3d1a064e1830755b18ec14-880x1222.png?w=1000&h=1389&q=80&fit=max&auto=format",
-  "https://cdn.sanity.io/images/c60rax1h/production/6c410d8e1417b2bdc2a1dcca1f347562c4e5ea9c-880x1222.png?w=800&h=1111&q=80&fit=max&auto=format",
-  "https://cdn.sanity.io/images/c60rax1h/production/d52f3cbb2051fd39cfd544a1896a6428d1966d6d-880x1222.png?w=800&h=1111&q=80&fit=max&auto=format",
-  "https://cdn.sanity.io/images/c60rax1h/production/6f111ee96c01a436f6e3be2da3af301da516b4a8-800x1111.png?w=800&h=1111&q=80&fit=max&auto=format",
-  "https://cdn.sanity.io/images/c60rax1h/production/eebfadc5552d57ee7c4afb4a3e1a975751492f48-880x1222.png?w=1000&h=1389&q=80&fit=max&auto=format",
-];
-
-// 제품명: 화면 바뀔 때마다 바뀌는 효과
+// 제품명 화면 바뀔 때마다 바뀌는 효과
 index = 1;
-index2 = 1;
-itemWidth = c_item.offsetWidth;
 section1.addEventListener("click", function () {
-  items.style.transform = `translate(${-itemWidth * index2}px,0%)`;
-  //화면 크기를 바꾸면 원래의 넓이만큼 움직이고 새로고침이 안됨 (새로고침해서 다시 해보면 되긴 함)
-
-  items.style.transition = "0.6s cubic-bezier(0, 0.6, 0.4, 1)";
-  // click할 때마다 위치가 다시 처음으로 돌아가서 이동하므로 이동거리를 계속 증가시켜줌
-  index2 += 1;
   if (index <= 4) {
     main.style.backgroundColor = firstSectionColor[index];
     s[index].style.opacity = "1";
@@ -155,17 +136,5 @@ section1.addEventListener("click", function () {
     s[4].style.transition = "0s";
     s[4].style.position = "absolute";
     index = 1;
-  }
-
-  // 반복
-  makeClone();
-  // a.cloneNode(true) : a 요소의 자식까지 모두 복사
-  function makeClone() {
-    for (i = 0; i < 5; i++) {
-      const c = c_item.cloneNode(true);
-      img.setAttribute("src", firstSectionImg[i]);
-      // c_item > f > img가 변함
-      items.appendChild(c);
-    }
   }
 });
