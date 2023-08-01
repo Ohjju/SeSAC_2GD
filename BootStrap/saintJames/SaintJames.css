@@ -25,7 +25,6 @@ header {
   height: 80px;
   position: fixed;
 }
-/* 맨 처음에 blur효과가 있는 상태(스크롤 내리면 ok) -> 고쳐야 함!! */
 
 /* <헤더> */
 /* 768px 이상일 때 반응형 */
@@ -116,7 +115,6 @@ header {
   }
 
   /* <메인> */
-
   .mouse {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -276,10 +274,735 @@ header {
     /* section1이면 어디든 클릭해도 슬라이드 실행 */
   }
   /* 슬라이드 끝 */
+
+  /* 섹션 2 */
+  .section2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article3 {
+    grid-column: 1/8;
+    height: 100%;
+  }
+
+  .a1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 8/8;
+    height: 100%;
+  }
+  .text2-1 {
+    width: 100%;
+    color: #543939;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 44px;
+    line-height: 44px;
+    padding-bottom: 16px;
+  }
+
+  .article4 {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 30px;
+  }
+
+  .img1 {
+    grid-column: 1 / 4;
+    height: 100%;
+    width: 100%;
+  }
+
+  .article5 {
+    grid-column: 4/8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .text2-2 {
+    color: #543939;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  .text2-3 {
+    color: #543939;
+    font-family: "Bacasime Antique", serif;
+    font-size: 18px;
+    line-height: 15px;
+    width: 100%;
+  }
+
+  .article6 {
+    grid-column: 9/13;
+  }
+
+  .article6-1 {
+    display: none;
+  }
+
+  .img2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 섹션 3 */
+  .section3 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article7 {
+    grid-column: 1 / span 7;
+  }
+
+  .text3-1 {
+    color: #543939;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 62px;
+    /* font-size: 37px; */
+    /* line-height: 35px; */
+    line-height: 50px;
+    padding-bottom: 16px;
+  }
+
+  .view {
+    display: flex;
+  }
+
+  .text3-2 {
+    color: #543939;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 6px;
+    font-size: 14px;
+  }
+
+  .text3-2:hover {
+    color: #9c8a85;
+    cursor: pointer;
+  }
+
+  .view > i {
+    margin: 6px;
+    font-size: 12px;
+    color: #543939;
+  }
+
+  .article8 {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+    padding-top: 30px;
+  }
+
+  /* item1 */
+  .item1 {
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 1;
+    padding: 8px 0;
+  }
+
+  img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .e_hover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .e {
+    color: rgba(255, 255, 255, 0);
+    /* 처음엔 투명으로 안보이게! */
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+    z-index: 1;
+    /* z-index로 인해 explore 글씨가 위로 올라감 */
+  }
+
+  /* 음료 hover했을때 explore 글씨랑 화면 흐려짐 */
+  .hover {
+    color: white;
+    border: 1px solid white;
+    transition-duration: 0.4s;
+    backdrop-filter: blur(5px);
+  }
+
+  .hover1 {
+    filter: blur(5px);
+    transition-duration: 0.4s;
+  }
+
+  .text3-3 {
+    color: #543939;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    width: 100%;
+  }
+  .text3-4 {
+    color: #543939;
+    font-size: 19px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item2 */
+  .item2 {
+    grid-column: 9 / span 4;
+    grid-row: 1 / span 1;
+
+    padding: 8px 0;
+  }
+
+  .item2 > img:hover {
+    filter: blur(5px);
+    transition-duration: 0.3s;
+  }
+
+  .item2 > img {
+    width: 100%;
+  }
+
+  .text3-5 {
+    color: #543939;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-6 {
+    color: #543939;
+    font-size: 19px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item3 */
+  .item3 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+
+    padding: 8px 0;
+  }
+
+  .item3 > img:hover {
+    filter: blur(5px);
+    transition-duration: 0.3s;
+  }
+
+  .item3 > img {
+    width: 100%;
+  }
+
+  .text3-7 {
+    color: #543939;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-8 {
+    color: #543939;
+    font-size: 19px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item4 */
+  .item4 {
+    grid-column: 5 / span 4;
+    grid-row: 2 / span 1;
+
+    padding: 8px 0;
+  }
+
+  .item4 > img:hover {
+    filter: blur(5px);
+    transition-duration: 0.3s;
+  }
+
+  .item4 > img {
+    width: 100%;
+  }
+
+  .text3-9 {
+    color: #543939;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-10 {
+    color: #543939;
+    font-size: 19px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item5 */
+  .item5 {
+    grid-column: 9 / span 4;
+    grid-row: 2 / span 1;
+
+    padding: 8px 0;
+  }
+
+  .item5 > img:hover {
+    filter: blur(5px);
+    transition-duration: 0.3s;
+  }
+
+  .item5 > img {
+    width: 100%;
+  }
+
+  .text3-11 {
+    color: #543939;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  .text3-12 {
+    color: #543939;
+    font-size: 19px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  .item1 :hover {
+    cursor: pointer;
+  }
+
+  .item2 :hover {
+    cursor: pointer;
+  }
+
+  .item3 :hover {
+    cursor: pointer;
+  }
+
+  .item4 :hover {
+    cursor: pointer;
+  }
+
+  .item5 :hover {
+    cursor: pointer;
+  }
+
+  /* 섹션 4 */
+  .section4 {
+    background-color: rgb(178, 149, 109);
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article9 {
+    grid-column: 1 / span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text4-1 {
+    color: white;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .article10 {
+    grid-column: 5 / span 4;
+  }
+
+  .article10 > img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  .text4-2 {
+    color: white;
+    font-size: 62px;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 50px;
+  }
+
+  .article11 {
+    grid-column: 9 / span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text4-3 {
+    font-size: 18px;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    padding-bottom: 20px;
+    width: 50%;
+    line-height: 17px;
+    font-weight: bold;
+  }
+
+  .a2 {
+    display: flex;
+  }
+
+  .readon {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    padding-left: 5px;
+  }
+
+  .readon :hover {
+    cursor: pointer;
+  }
+
+  .text4-4:hover {
+    color: #d8c9b5;
+  }
+
+  .text4-4 {
+    font-size: 14px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 3px;
+    font-weight: bold;
+  }
+
+  .readon > i {
+    color: white;
+    padding-right: 8px;
+    font-size: 12px;
+    padding-bottom: 3px;
+  }
+
+  /* 섹션 5 */
+  .section5 {
+    padding: 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article12 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text5-1 {
+    color: #543939;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text5-2 {
+    color: #b2956d;
+    font-size: 62px;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: -2px;
+    line-height: 50px;
+    padding-top: 20px;
+  }
+
+  .text5-3 {
+    color: #543939;
+    font-size: 62px;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: -2px;
+    line-height: 50px;
+  }
+
+  /* 섹션 6 */
+  .section6 {
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article13 {
+    grid-column: 1 / span 5;
+    display: grid;
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .text6-1 {
+    color: #543939;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text6-2 {
+    color: #543939;
+    font-size: 42px;
+    font-family: "Nunito Sans", sans-serif;
+    width: 100%;
+    line-height: 40px;
+  }
+
+  .a4 {
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .text6-3 {
+    color: #543939;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text6-4 {
+    color: #543939;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  .a5 {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .a5-1 {
+    display: none;
+  }
+
+  .a5 > i {
+    color: #543939;
+    font-size: 12px;
+    padding-right: 8px;
+  }
+
+  .text6-5 {
+    color: #543939;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+    grid-column: 1 / span 3;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+  }
+
+  .text6-5:hover {
+    color: #9c8a85;
+    cursor: pointer;
+  }
+
+  .article14 {
+    grid-column: 6 / span 7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .a6 {
+    grid-column: 1 / span 3;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .a6 > img {
+    width: 100%;
+  }
+
+  .a7 {
+    grid-column: 4 / span 4;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .a7 > img {
+    width: 100%;
+  }
+
+  .a4-1 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none;
+  }
+
+  /* 섹션 7 */
+  .section7 {
+    background-color: #543939;
+    width: calc(100vw - 16.5px);
+    height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .article15 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .a8 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text7-1 {
+    padding: 0 6px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text7-1:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-2 {
+    padding: 0 6px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text7-2:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-3 {
+    padding: 0 6px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text7-3:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-4 {
+    padding: 0 6px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text7-4:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .a9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text7-5 {
+    font-family: "Noto Sans KR", sans-serif;
+    color: white;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .text7-6 {
+    color: white;
+    font-family: "Bacasime Antique", serif;
+    font-size: 18px;
+    width: 31%;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .a10 {
+    width: 30%;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed white;
+    display: flex;
+  }
+
+  .a10 > input {
+    border: none;
+    background-color: #54393900;
+    width: 100%;
+  }
+
+  .a10 > button {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 0, 0);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+  }
+
+  .a11 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* 768px 미만일 때 */
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
   .header1 {
     display: flex;
     width: 100vw;
@@ -326,14 +1049,6 @@ header {
   }
 
   /* <메인> */
-  .mouse {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 100%;
-    box-sizing: border-box;
-    width: calc(100vw - 16.5px);
-  }
-
   .section1 {
     height: 100%;
     position: relative;
@@ -341,6 +1056,21 @@ header {
     box-sizing: border-box;
     width: calc(100vw - 16.5px);
     z-index: 1;
+  }
+
+  .mouse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+    position: relative;
+  }
+
+  .space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .article1 {
@@ -351,20 +1081,27 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 80px 0 0 80px;
+    padding: 0 0 0 60px;
     grid-column: 1 / span 4;
     box-sizing: border-box;
+    margin: 50px 0 0 0;
   }
 
   /* 768px 미만일 때 제품명 */
   .hidden {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     grid-column: 1 / span 4;
     box-sizing: border-box;
+    width: 90%;
+    /* 높이가 주어져야 space-between이 먹힘 */
   }
+
+  .empty {
+    display: none;
+  }
+  /* 있으면 space-between으로 인해 위에 공간이 계속 생김 */
 
   .sentences {
     width: 100%;
@@ -448,16 +1185,14 @@ header {
 
   .wrapper {
     height: 100%;
-    /* position: absolute; */
-    /* 사진 크기 absolute 안하면 커짐 */
+    position: absolute;
     overflow: hidden;
     display: flex;
-    /* display : flex 하면 items랑 clone한거랑 똑같은 위치에 놓임 */
   }
 
   /* 전체 사진 묶음 */
   .items {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
   }
 
@@ -466,7 +1201,7 @@ header {
   }
 
   .c-item {
-    flex: 0 0 90%;
+    flex: 0 0 88%;
     /* 사진 크기 조절 */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -487,6 +1222,716 @@ header {
     /* section1이면 어디든 클릭해도 슬라이드 실행 */
   }
   /* 슬라이드 끝 */
+
+  /* 섹션 2 */
+  .section2 {
+    display: grid;
+    column-gap: 30px;
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article3 {
+    height: 100%;
+  }
+
+  .a1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, minmax(1fr));
+    /* 그냥 fr은 동일비율 */
+    height: 100%;
+  }
+
+  .text2-1 {
+    width: 100%;
+    color: #543939;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 24px;
+    line-height: 23px;
+    padding-bottom: 16px;
+    grid-column: 1/ 5;
+    grid-row: 1 / 1;
+  }
+
+  .article4 {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 30px;
+    grid-column: 1/ 5;
+    grid-row: 5/ 6;
+  }
+
+  .img1 {
+    height: 100%;
+    grid-column: 1/ 5;
+  }
+
+  .article5 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 5/ 8;
+  }
+
+  .text2-2 {
+    color: #543939;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  .text2-3 {
+    color: #543939;
+    font-family: "Bacasime Antique", serif;
+    font-size: 14px;
+    width: 100%;
+    line-height: 14px;
+  }
+
+  .article6 {
+    display: none;
+  }
+
+  .article6-1 {
+    display: block;
+    height: 100%;
+    grid-column: 2/ 5;
+    grid-row: 2 / span 3;
+  }
+
+  .img2 {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 26px;
+  }
+
+  /* 섹션 3 */
+  .section3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, minmax(1fr));
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article7 {
+    grid-column: 1 / span 5;
+    grid-row: 1/ 2;
+  }
+
+  .text3-1 {
+    color: #543939;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 38px;
+    line-height: 35px;
+    padding-bottom: 16px;
+  }
+
+  .view {
+    display: flex;
+  }
+
+  .text3-2 {
+    color: #543939;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 6px;
+    font-size: 12px;
+  }
+
+  .text3-2:hover {
+    color: #9c8a85;
+    cursor: pointer;
+  }
+
+  .view > i {
+    margin: 6px;
+    font-size: 12px;
+    color: #543939;
+  }
+
+  .article8 {
+    grid-column: 1/5;
+    grid-row: 2/ 5;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
+    padding-top: 30px;
+  }
+
+  /* item1 */
+  .item1 {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    padding: 8px 0;
+  }
+
+  img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .e_hover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .e {
+    color: rgba(255, 255, 255, 0);
+    /* 처음엔 투명으로 안보이게! */
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+    z-index: 1;
+    /* z-index로 인해 explore 글씨가 위로 올라감 */
+  }
+
+  .text3-3 {
+    color: #543939;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    width: 100%;
+  }
+  .text3-4 {
+    color: #543939;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item2 */
+  .item2 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    padding: 8px 0;
+  }
+
+  .item2 > img {
+    width: 100%;
+  }
+
+  .text3-5 {
+    color: #543939;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-6 {
+    color: #543939;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item3 */
+  .item3 {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 1;
+    padding: 8px 0;
+  }
+
+  .item3 > img {
+    width: 100%;
+  }
+
+  .text3-7 {
+    color: #543939;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-8 {
+    color: #543939;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item4 */
+  .item4 {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 1;
+    padding: 8px 0;
+  }
+
+  .item4 > img {
+    width: 100%;
+  }
+
+  .text3-9 {
+    color: #543939;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .text3-10 {
+    color: #543939;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  /* item5 */
+  .item5 {
+    grid-column: 2 / span 4;
+    grid-row: 5 / span 1;
+    padding: 8px 0;
+  }
+
+  .item5 > img {
+    width: 100%;
+  }
+
+  .text3-11 {
+    color: #543939;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  .text3-12 {
+    color: #543939;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Bacasime Antique", serif;
+  }
+
+  .item1 :hover {
+    cursor: pointer;
+  }
+
+  .item2 :hover {
+    cursor: pointer;
+  }
+
+  .item3 :hover {
+    cursor: pointer;
+  }
+
+  .item4 :hover {
+    cursor: pointer;
+  }
+
+  .item5 :hover {
+    cursor: pointer;
+  }
+
+  /* 섹션 4 */
+  .section4 {
+    background-color: rgb(178, 149, 109);
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, minmax(1fr));
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article9 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text4-1 {
+    color: white;
+    font-size: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .article10 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 3;
+  }
+
+  .article10 > img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+
+  .text4-2 {
+    color: white;
+    font-size: 40px;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 40px;
+  }
+
+  .article11 {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text4-3 {
+    font-size: 15px;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    padding-bottom: 20px;
+    width: 50%;
+    line-height: 15px;
+    font-weight: bold;
+  }
+
+  .a2 {
+    display: flex;
+  }
+
+  .readon {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    padding-left: 5px;
+  }
+
+  .readon :hover {
+    cursor: pointer;
+  }
+
+  .text4-4:hover {
+    color: #d8c9b5;
+  }
+
+  .text4-4 {
+    font-size: 12px;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 3px;
+    font-weight: bold;
+  }
+
+  .readon > i {
+    color: white;
+    padding-right: 8px;
+    font-size: 10px;
+    padding-bottom: 3px;
+  }
+
+  /* 섹션 5 */
+  .section5 {
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article12 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text5-1 {
+    color: #543939;
+    font-size: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text5-2 {
+    color: #b2956d;
+    font-size: 38px;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: -2px;
+    line-height: 38px;
+    padding-top: 20px;
+  }
+
+  .text5-3 {
+    color: #543939;
+    font-size: 38px;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: -2px;
+    line-height: 38px;
+  }
+
+  /* 섹션 6 */
+  .section6 {
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, minmax(1fr));
+    column-gap: 30px;
+    box-sizing: border-box;
+    width: calc(100vw - 16.5px);
+  }
+
+  .article13 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    display: grid;
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .text6-1 {
+    color: #543939;
+    font-size: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text6-2 {
+    color: #543939;
+    font-size: 26px;
+    font-family: "Nunito Sans", sans-serif;
+    width: 100%;
+    line-height: 23px;
+  }
+
+  .a4 {
+    display: none;
+  }
+
+  .text6-3 {
+    color: #543939;
+    font-size: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 15px;
+  }
+
+  .text6-4 {
+    display: none;
+  }
+
+  .a5 {
+    display: none;
+  }
+
+  .a5-1 {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .a5-1 > i {
+    color: #543939;
+    font-size: 10px;
+    padding-right: 8px;
+  }
+
+  .text6-5 {
+    color: #543939;
+    font-size: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    grid-column: 1 / span 3;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+  }
+
+  .text6-5:hover {
+    color: #9c8a85;
+    cursor: pointer;
+  }
+
+  .article14 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(1fr));
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .a6 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .a6 > img {
+    width: 100%;
+  }
+
+  .a7 {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 2;
+  }
+
+  .a7 > img {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .a4-1 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* 섹션 7 */
+  .section7 {
+    background-color: #543939;
+    width: calc(100vw - 16.5px);
+    height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .article15 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .a8 {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text7-1 {
+    /* padding: 0 6px; */
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    /* font-size: 14px; */
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .text7-1:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-2 {
+    /* padding: 0 6px; */
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    /* font-size: 14px; */
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .text7-2:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-3 {
+    /* padding: 0 6px; */
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    /* font-size: 14px; */
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .text7-3:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .text7-4 {
+    /* padding: 0 6px; */
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    /* font-size: 14px; */
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .text7-4:hover {
+    cursor: pointer;
+    color: #a59797;
+  }
+
+  .a9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text7-5 {
+    font-family: "Noto Sans KR", sans-serif;
+    color: white;
+    /* font-size: 14px; */
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .text7-6 {
+    color: white;
+    font-family: "Bacasime Antique", serif;
+    /* font-size: 18px; */
+    font-size: 15px;
+    /* width: 31%; */
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .a10 {
+    /* width: 30%; */
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed white;
+    display: flex;
+  }
+
+  .a10 > input {
+    border: none;
+    background-color: #54393900;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .a10 > button {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 0, 0);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .a11 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* <메인> */
@@ -516,706 +1961,4 @@ main {
   transition: 0.2s;
   transition-timing-function: ease-out;
   z-index: 1;
-}
-
-/* 섹션 2 */
-.section2 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 30px;
-  padding: 30px 30px 100px 30px;
-  box-sizing: border-box;
-  width: calc(100vw - 16.5px);
-}
-
-.article3 {
-  grid-column: 1/8;
-  height: 100%;
-}
-
-.a1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  grid-column: 8/8;
-  height: 100%;
-}
-.text2-1 {
-  width: 100%;
-  color: #543939;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 44px;
-  line-height: 44px;
-  padding-bottom: 16px;
-}
-
-.article4 {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  column-gap: 30px;
-}
-
-.img1 {
-  grid-column: 1 / 4;
-  height: 100%;
-  width: 100%;
-}
-
-.article5 {
-  grid-column: 4/8;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.text2-2 {
-  color: #543939;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 14px;
-  width: 100%;
-  padding-bottom: 15px;
-}
-
-.text2-3 {
-  color: #543939;
-  font-family: "Bacasime Antique", serif;
-  font-size: 18px;
-  line-height: 15px;
-  width: 100%;
-}
-
-.article6 {
-  grid-column: 9/13;
-}
-
-.img2 {
-  width: 100%;
-  height: 100%;
-}
-
-/* 섹션 3 */
-.section3 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 30px;
-  padding: 30px 30px 100px 30px;
-  box-sizing: border-box;
-  width: calc(100vw - 16.5px);
-}
-
-.article7 {
-  grid-column: 1 / span 7;
-}
-
-.text3-1 {
-  color: #543939;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 62px;
-  line-height: 50px;
-  padding-bottom: 16px;
-}
-
-.view {
-  display: flex;
-}
-
-.text3-2 {
-  color: #543939;
-  font-family: "Noto Sans KR", sans-serif;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-underline-offset: 6px;
-  font-size: 14px;
-}
-
-.text3-2:hover {
-  color: #9c8a85;
-  cursor: pointer;
-}
-
-.view > i {
-  margin: 6px;
-  font-size: 12px;
-  color: #543939;
-}
-
-.article8 {
-  grid-column: 1/13;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr;
-  column-gap: 30px;
-  row-gap: 30px;
-  box-sizing: border-box;
-  padding-top: 30px;
-}
-
-/* item1 */
-.item1 {
-  grid-column: 5 / span 4;
-  grid-row: 1 / span 1;
-  padding: 8px 0;
-}
-
-img {
-  width: 100%;
-  padding: 0;
-}
-
-.e_hover {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.e {
-  color: rgba(255, 255, 255, 0);
-  /* 처음엔 투명으로 안보이게! */
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  box-sizing: border-box;
-  padding: 8px 8px 8px 8px;
-  border-radius: 5px;
-  z-index: 1;
-  /* z-index로 인해 explore 글씨가 위로 올라감 */
-}
-
-/* 음료 hover했을때 explore 글씨랑 화면 흐려짐 */
-.hover {
-  color: white;
-  border: 1px solid white;
-  transition-duration: 0.4s;
-  backdrop-filter: blur(5px);
-}
-
-.hover1 {
-  filter: blur(5px);
-  transition-duration: 0.4s;
-}
-
-.text3-3 {
-  color: #543939;
-  font-size: 14px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
-  width: 100%;
-}
-.text3-4 {
-  color: #543939;
-  font-size: 19px;
-  text-align: center;
-  font-family: "Bacasime Antique", serif;
-}
-
-/* item2 */
-.item2 {
-  grid-column: 9 / span 4;
-  grid-row: 1 / span 1;
-  padding: 8px 0;
-}
-
-.item2 > img:hover {
-  filter: blur(5px);
-  transition-duration: 0.3s;
-}
-
-.item2 > img {
-  width: 100%;
-}
-
-.text3-5 {
-  color: #543939;
-  font-size: 14px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
-}
-.text3-6 {
-  color: #543939;
-  font-size: 19px;
-  text-align: center;
-  font-family: "Bacasime Antique", serif;
-}
-
-/* item3 */
-.item3 {
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 1;
-  padding: 8px 0;
-}
-
-.item3 > img:hover {
-  filter: blur(5px);
-  transition-duration: 0.3s;
-}
-
-.item3 > img {
-  width: 100%;
-}
-
-.text3-7 {
-  color: #543939;
-  font-size: 14px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
-}
-.text3-8 {
-  color: #543939;
-  font-size: 19px;
-  text-align: center;
-  font-family: "Bacasime Antique", serif;
-}
-
-/* item4 */
-.item4 {
-  grid-column: 5 / span 4;
-  grid-row: 2 / span 1;
-  padding: 8px 0;
-}
-
-.item4 > img:hover {
-  filter: blur(5px);
-  transition-duration: 0.3s;
-}
-
-.item4 > img {
-  width: 100%;
-}
-
-.text3-9 {
-  color: #543939;
-  font-size: 14px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
-}
-.text3-10 {
-  color: #543939;
-  font-size: 19px;
-  text-align: center;
-  font-family: "Bacasime Antique", serif;
-}
-
-/* item5 */
-.item5 {
-  grid-column: 9 / span 4;
-  grid-row: 2 / span 1;
-  padding: 8px 0;
-}
-
-.item5 > img:hover {
-  filter: blur(5px);
-  transition-duration: 0.3s;
-}
-
-.item5 > img {
-  width: 100%;
-}
-
-.text3-11 {
-  color: #543939;
-  font-size: 14px;
-  padding-top: 20px;
-  text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.text3-12 {
-  color: #543939;
-  font-size: 19px;
-  text-align: center;
-  font-family: "Bacasime Antique", serif;
-}
-
-.item1 :hover {
-  cursor: pointer;
-}
-
-.item2 :hover {
-  cursor: pointer;
-}
-
-.item3 :hover {
-  cursor: pointer;
-}
-
-.item4 :hover {
-  cursor: pointer;
-}
-
-.item5 :hover {
-  cursor: pointer;
-}
-
-/* 섹션 4 */
-.section4 {
-  background-color: rgb(178, 149, 109);
-  padding: 100px 30px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 30px;
-  box-sizing: border-box;
-  width: calc(100vw - 16.5px);
-}
-
-.article9 {
-  grid-column: 1 / span 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.text4-1 {
-  color: white;
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  padding-bottom: 20px;
-}
-
-.article10 {
-  grid-column: 5 / span 4;
-}
-
-.article10 > img {
-  width: 100%;
-}
-
-.text4-2 {
-  color: white;
-  font-size: 62px;
-  font-family: "Nunito Sans", sans-serif;
-  line-height: 50px;
-}
-
-.article11 {
-  grid-column: 9 / span 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.text4-3 {
-  font-size: 18px;
-  color: white;
-  font-family: "Cormorant Garamond", serif;
-  padding-bottom: 20px;
-  width: 50%;
-  line-height: 17px;
-  font-weight: bold;
-}
-
-.a2 {
-  display: flex;
-}
-
-.readon {
-  display: flex;
-  align-items: flex-end;
-  width: 50%;
-  padding-left: 5px;
-}
-
-.readon :hover {
-  cursor: pointer;
-}
-
-.text4-4:hover {
-  color: #d8c9b5;
-}
-
-.text4-4 {
-  font-size: 14px;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-underline-offset: 3px;
-  font-weight: bold;
-}
-
-.readon > i {
-  color: white;
-  padding-right: 8px;
-  font-size: 12px;
-  padding-bottom: 2px;
-}
-
-/* 섹션 5 */
-.section5 {
-  padding: 100px 30px;
-  box-sizing: border-box;
-  width: calc(100vw - 16.5px);
-}
-
-.article12 {
-  display: flex;
-  flex-direction: column;
-}
-
-.text5-1 {
-  color: #543939;
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  padding-bottom: 15px;
-}
-
-.text5-2 {
-  color: #b2956d;
-  font-size: 62px;
-  font-family: "Nunito Sans", sans-serif;
-  letter-spacing: -2px;
-  line-height: 50px;
-  padding-top: 20px;
-}
-
-.text5-3 {
-  color: #543939;
-  font-size: 62px;
-  font-family: "Nunito Sans", sans-serif;
-  letter-spacing: -2px;
-  line-height: 50px;
-}
-
-/* 섹션 6 */
-.section6 {
-  padding: 100px 30px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 30px;
-  box-sizing: border-box;
-  width: calc(100vw - 16.5px);
-}
-
-.article13 {
-  grid-column: 1 / span 5;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 30px;
-  box-sizing: border-box;
-}
-
-.a3 {
-  grid-column: 1 / span 5;
-}
-
-.text6-1 {
-  color: #543939;
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  padding-bottom: 15px;
-}
-
-.text6-2 {
-  color: #543939;
-  font-size: 42px;
-  font-family: "Nunito Sans", sans-serif;
-  width: 100%;
-  line-height: 40px;
-}
-
-.a4 {
-  grid-column: 1 / span 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.text6-3 {
-  color: #543939;
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  padding-bottom: 15px;
-}
-
-.text6-4 {
-  color: #543939;
-  font-size: 16px;
-  line-height: 16px;
-  font-family: "Bacasime Antique", serif;
-}
-
-.a5 {
-  display: flex;
-  padding-top: 20px;
-  align-items: center;
-}
-
-.a5 > i {
-  color: #543939;
-  font-size: 12px;
-  padding-right: 8px;
-}
-
-.text6-5 {
-  color: #543939;
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  grid-column: 1 / span 3;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-underline-offset: 5px;
-}
-
-.text6-5:hover {
-  color: #9c8a85;
-  cursor: pointer;
-}
-
-.article14 {
-  grid-column: 6 / span 7;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  column-gap: 30px;
-  box-sizing: border-box;
-}
-
-.a6 {
-  grid-column: 1 / span 3;
-  display: flex;
-  align-self: flex-end;
-}
-
-.a6 > img {
-  width: 100%;
-}
-
-.a7 {
-  grid-column: 4 / span 4;
-}
-
-.a7 > img {
-  width: 100%;
-}
-
-/* 섹션 7 */
-.section7 {
-  background-color: #543939;
-  width: calc(100vw - 16.5px);
-  height: 100vh;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-.article15 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.a8 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.text7-1 {
-  padding: 0 6px;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.text7-1:hover {
-  cursor: pointer;
-  color: #a59797;
-}
-
-.text7-2 {
-  padding: 0 6px;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.text7-2:hover {
-  cursor: pointer;
-  color: #a59797;
-}
-
-.text7-3 {
-  padding: 0 6px;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.text7-3:hover {
-  cursor: pointer;
-  color: #a59797;
-}
-
-.text7-4 {
-  padding: 0 6px;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.text7-4:hover {
-  cursor: pointer;
-  color: #a59797;
-}
-
-.a9 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text7-5 {
-  font-family: "Noto Sans KR", sans-serif;
-  color: white;
-  font-size: 14px;
-  padding-bottom: 10px;
-}
-
-.text7-6 {
-  color: white;
-  font-family: "Bacasime Antique", serif;
-  font-size: 18px;
-  width: 31%;
-  line-height: 17px;
-  text-align: center;
-}
-
-.a10 {
-  width: 30%;
-  padding-top: 40px;
-  padding-bottom: 5px;
-  border-bottom: 1px dashed white;
-  display: flex;
-}
-
-.a10 > input {
-  border: none;
-  background-color: #54393900;
-  width: 100%;
-}
-
-.a10 > button {
-  cursor: pointer;
-  border: none;
-  color: white;
-  background-color: rgba(255, 255, 0, 0);
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-}
-
-.a11 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }

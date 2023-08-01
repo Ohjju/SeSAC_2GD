@@ -59,26 +59,36 @@ $(".e5_hover").hover(
 );
 
 // scroll 이벤트
+const section1 = document.querySelector(".section1");
+const section7 = document.querySelector(".section7");
+const body = document.querySelector("body");
+const height1 = section1.offsetHeight;
+// section1의 높이
+const scrollHeight = body.scrollHeight;
+// 전체의 길이
+const height7 = section7.offsetHeight;
+// section7의 길이
+const h = scrollHeight - height7;
+// section7에서는 header 안보이므로
 window.addEventListener("scroll", () => {
   console.log(scrollY);
-  if (scrollY < 900) {
+  if (scrollY < height1) {
     document.querySelector(".backdrop").style.backdropFilter = "blur(0px)";
     document.querySelector(".backdrop").style.backgroundColor =
       "rgba(255, 255, 255, 0)";
     document.querySelector("header").style.opacity = "1";
-  } else if (scrollY >= 969 && scrollY <= 6653) {
+  } else if (scrollY >= height1 && scrollY < h) {
     document.querySelector(".backdrop").style.backdropFilter = "blur(15px)";
     document.querySelector(".backdrop").style.backgroundColor =
       "rgba(84, 57, 57, 0.25)";
     document.querySelector("header").style.opacity = "1";
-  } else if (scrollY > 6653) {
+  } else if (scrollY > h) {
     document.querySelector("header").style.opacity = "0";
   }
 });
 
 // 마우스 따라다니는 클릭
 const mouse = document.querySelector(".mouseClick");
-const section1 = document.querySelector(".section1");
 
 section1.addEventListener("mousemove", function (e) {
   const x = e.pageX;
