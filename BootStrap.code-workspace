@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "path": "BootStrap"
+    },
+    {
+      "path": "css"
+    },
+    {
+      "path": "css_practice"
+    },
+    {
+      "path": "etc"
+    },
+    {
+      "path": "html"
+    },
+    {
+      "path": "jq_quiz"
+    },
+    {
+      "path": "JQuery"
+    },
+    {
+      "path": "JS"
+    },
+    {
+      "path": "js_quiz"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "BootStrap",
+    "liveServer.settings.port": 5501
+  }
+}

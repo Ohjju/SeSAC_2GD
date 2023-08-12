@@ -141,7 +141,6 @@ index2 = 1;
 itemWidth = c_item.offsetWidth;
 section1.addEventListener("click", function () {
   items.style.transform = `translate(${-itemWidth * index2}px,0%)`;
-  //화면 크기를 바꾸면 원래의 넓이만큼 움직이고 새로고침이 안됨 (새로고침해서 다시 해보면 되긴 함)
 
   items.style.transition = "0.6s cubic-bezier(0, 0.6, 0.4, 1)";
   // click할 때마다 위치가 다시 처음으로 돌아가서 이동하므로 이동거리를 계속 증가시켜줌
