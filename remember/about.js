@@ -1,34 +1,3 @@
-// section3 스크롤하면 글씨 나타나는 애니메이션
-let a3_0 = document.querySelector(".article3-0");
-let a3_1 = document.querySelector(".article3-1");
-let a3_2 = document.querySelector(".article3-2");
-let a3_3 = document.querySelector(".article3-3");
-let a3_4 = document.querySelector(".article3-4");
-let a3_5 = document.querySelector(".article3-5");
-const a = [a3_0, a3_1, a3_2, a3_3, a3_4, a3_5];
-
-let margin = 700;
-let saTriggerHeight = 0;
-const saFunc = function () {
-  for (let index = 0; index < 6; index++) {
-    if (!a[index].classList.contains("show")) {
-      saTriggerHeight = a[index].getBoundingClientRect().top + margin;
-
-      if (window.innerHeight > saTriggerHeight) {
-        a[index].classList.add("show");
-      }
-      // if (index >= 1) {
-      //   if (a[index - 1].classList.contains("show")) {
-      //     a[index - 1].classList.remove("show");
-      //   }
-      // }
-    }
-  }
-};
-
-// window.addEventListener("onload", saFunc);
-window.addEventListener("scroll", saFunc);
-
 // 스크롤 할 때마다 함수가 실행됨 (여러번 반복됨)
 
 // let observer1 = new IntersectionObserver((e) => {
@@ -267,6 +236,7 @@ for (let index = 0; index < 3; index++) {
 
 // gray_header 이벤트
 const body = document.querySelector("body");
+const header = document.querySelector(".header");
 const section1 = document.querySelector(".section1");
 const section3 = document.querySelector(".section3");
 const section4 = document.querySelector(".section4");
@@ -287,46 +257,113 @@ let height4 = section4.offsetHeight;
 let height5 = section5.offsetHeight;
 let height6 = section6.offsetHeight;
 let height7 = section7.offsetHeight;
-const h1_3 = height1 + height3 + 100;
+const h1_3 = height1 + height3;
 const h1_4 = height1 + height3 + height4 + 200;
 const h1_5 = height1 + height3 + height4 + height5 + 350;
-const h1_7 = height1 + height3 + height4 + height5 + height6 + height7;
+const h1_7 = height1 + height3 + height4 + height5 + height6 + height7 + 300;
+
+// section3 스크롤하면 글씨 나타나는 애니메이션
+let a3_0 = document.querySelector(".article3-0");
+let a3_1 = document.querySelector(".article3-1");
+let a3_2 = document.querySelector(".article3-2");
+let a3_3 = document.querySelector(".article3-3");
+let a3_4 = document.querySelector(".article3-4");
+let a3_5 = document.querySelector(".article3-5");
+const a = [a3_0, a3_1, a3_2, a3_3, a3_4, a3_5];
+
+let a0 = a3_0.offsetHeight;
+let a1 = a3_1.offsetHeight;
+let a2 = a3_2.offsetHeight;
+let a3 = a3_3.offsetHeight;
+let a4 = a3_4.offsetHeight;
+let a5 = a3_5.offsetHeight;
+const a0_1 = a0 + a1;
+
+let margin = 700;
+let saTriggerHeight = 0;
+const saFunc = function () {
+  for (let index = 0; index < 6; index++) {
+    if (!a[index].classList.contains("show")) {
+      saTriggerHeight = a[index].getBoundingClientRect().top + margin;
+
+      if (window.innerHeight > saTriggerHeight) {
+        a[index].classList.add("show");
+      }
+    }
+  }
+};
+// window.addEventListener("onload", saFunc);
+// window.addEventListener("scroll", saFunc);
 
 window.addEventListener("scroll", () => {
   console.log(scrollY);
-  if (scrollY < h1_3) {
-    backdrop.style.backdropFilter = "blur(0px)";
-    gray_header.style.opacity = "0";
-    gray_header.style.transition = "0.5s";
-  } else if (scrollY > h1_3 && scrollY <= h1_4) {
-    backdrop.style.backdropFilter = "blur(10px)";
-    gray_header.style.opacity = "1";
-    backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
-    gray_header.style.transition = "0.5s";
-    menu1.style.transition = "0.1s";
-    menu1.classList.add("menu_on");
-    menu2.classList.remove("menu_on");
-    menu3.classList.remove("menu_on");
-  } else if (scrollY > h1_4 && scrollY <= h1_5) {
-    backdrop.style.backdropFilter = "blur(10px)";
-    gray_header.style.opacity = "1";
-    backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
-    gray_header.style.transition = "0.5s";
-    menu2.style.transition = "0.1s";
-    menu1.classList.remove("menu_on");
-    menu2.classList.add("menu_on");
-    menu3.classList.remove("menu_on");
-  } else if (scrollY > h1_5 && scrollY <= h1_7) {
-    backdrop.style.backdropFilter = "blur(10px)";
-    gray_header.style.opacity = "1";
-    backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
-    gray_header.style.transition = "0.5s";
-    menu3.style.transition = "0.1s";
-    menu1.classList.remove("menu_on");
-    menu2.classList.remove("menu_on");
-    menu3.classList.add("menu_on");
-  } else if (scrollY > h1_7) {
-    gray_header.style.opacity = "0";
-    gray_header.style.transition = "0.5s";
+  if (scrollY > height1 && scrollY <= a0_1) {
+    a3_0.classList.add("sa");
+    a3_0.classList.add("show");
+  } else if (scrollY > a0 && scrollY <= a1) {
+    a3_1.classList.add("sa");
+    a3_1.classList.add("show");
+  } else if (scrollY > a1 && scrollY <= a2) {
+    a3_2.classList.add("sa");
+    a3_1.classList.add("show");
+  } else if (scrollY > a2 && scrollY <= a3) {
+    a3_3.classList.add("sa");
+    a3_1.classList.add("show");
+  } else if (scrollY > a3 && scrollY <= a4) {
+    a3_4.classList.add("sa");
+    a3_1.classList.add("show");
+  } else if (scrollY > a4 && scrollY <= a5) {
+    a3_5.classList.add("sa");
+    a3_1.classList.add("show");
   }
 });
+
+// window.addEventListener("scroll", () => {
+//   if (scrollY <= h1_3) {
+//     backdrop.style.backdropFilter = "blur(0px)";
+//     gray_header.style.opacity = "0";
+//     gray_header.style.transition = "0.5s";
+//     section7.style.opacity = "1";
+//     header.style.opacity = "1";
+//   } else if (scrollY > h1_3 && scrollY <= h1_4) {
+//     backdrop.style.backdropFilter = "blur(10px)";
+//     gray_header.style.opacity = "1";
+//     backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
+//     gray_header.style.transition = "0.3s";
+//     menu1.style.transition = "0.1s";
+//     menu1.classList.add("menu_on");
+//     menu2.classList.remove("menu_on");
+//     menu3.classList.remove("menu_on");
+//     header.style.opacity = "0";
+//     header.style.transition = "0.3s";
+//     section7.style.opacity = "1";
+//   } else if (scrollY > h1_4 && scrollY <= h1_5) {
+//     backdrop.style.backdropFilter = "blur(10px)";
+//     gray_header.style.opacity = "1";
+//     backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
+//     gray_header.style.transition = "0.3s";
+//     menu2.style.transition = "0.1s";
+//     menu1.classList.remove("menu_on");
+//     menu2.classList.add("menu_on");
+//     menu3.classList.remove("menu_on");
+//     header.style.opacity = "0";
+//     section7.style.opacity = "1";
+//   } else if (scrollY > h1_5 && scrollY <= h1_7) {
+//     backdrop.style.backdropFilter = "blur(10px)";
+//     gray_header.style.opacity = "1";
+//     backdrop.style.backgroundColor = "rgba(220, 220, 220, 0.148)";
+//     gray_header.style.transition = "0.3s";
+//     menu3.style.transition = "0.1s";
+//     menu1.classList.remove("menu_on");
+//     menu2.classList.remove("menu_on");
+//     menu3.classList.add("menu_on");
+//     header.style.opacity = "0";
+//     section7.style.opacity = "1";
+//   } else if (scrollY > h1_7) {
+//     gray_header.style.opacity = "0";
+//     gray_header.style.transition = "0.5s";
+//     section7.style.opacity = "0";
+//     header.style.opacity = "0";
+//     section7.style.transition = "0.5s";
+//   }
+// });

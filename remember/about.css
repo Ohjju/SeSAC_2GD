@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: #fcfcfc;
   margin: 0;
@@ -96,6 +104,7 @@ body {
 .section1 .article1-2 .section1_img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .section1 .article1-3 {
@@ -120,6 +129,7 @@ body {
 }
 
 .section1 .article1-4 .About {
+  font-family: "Pretendard-regular";
   font-size: 7.5vw;
   font-weight: bold;
 }
@@ -194,10 +204,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #fcfcfc; */
+  background-color: #fcfcfc;
 }
 
 .section3 .article3-0 .text_start {
+  font-family: "Pretendard-regular";
   font-size: 2.5vw;
   font-weight: bold;
 }
@@ -207,6 +218,7 @@ body {
 .article3-3,
 .article3-4,
 .article3-5 p {
+  font-family: "Pretendard-regular";
   font-size: 1.5vw;
   font-weight: bold;
 }
@@ -239,6 +251,7 @@ body {
 }
 
 .section3 .article3-5 .temp1-5 .text_temp1-5 {
+  font-family: "Pretendard-regular";
   font-size: 1.5vw;
   font-weight: 700;
   display: flex;
@@ -251,17 +264,7 @@ body {
   width: 50vw;
   height: 3px;
   background-color: #eb2a00;
-  /* animation: fadein 3s; */
 }
-/* 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
 
 /* section4 시작하면서 헤더 바뀜 */
 /* 배경 scroll 이벤트 주기 위해서 따로 뺌 */
@@ -284,6 +287,7 @@ body {
 }
 
 .gray_header .menu1 {
+  font-family: "Pretendard-regular";
   font-size: 12px;
   /* 폰트가 10px이하로는 적용되지 않음...기본세팅! => zoom으로 해결 */
   font-weight: bold;
@@ -293,6 +297,7 @@ body {
 }
 
 .gray_header .menu2 {
+  font-family: "Pretendard-regular";
   font-size: 12px;
   font-weight: bold;
   margin: 0 16px;
@@ -303,6 +308,7 @@ body {
 }
 
 .gray_header .menu3 {
+  font-family: "Pretendard-regular";
   font-size: 12px;
   font-weight: bold;
   margin: 0 16px;
@@ -350,6 +356,7 @@ body {
 }
 
 .section4 .article4-1 .carbon {
+  font-family: "Pretendard-regular";
   font-size: 3vw;
   font-weight: 700;
 }
@@ -364,6 +371,7 @@ body {
 }
 
 .section4 .article4-2 .text_carbon {
+  font-family: "Pretendard-regular";
   font-size: 1.3vw;
   font-weight: 700;
 }
@@ -408,6 +416,7 @@ body {
 }
 
 .section5 #trash {
+  font-family: "Pretendard-regular";
   transform: translateY(200px);
   font-size: 400px;
   color: #adadad45;
@@ -425,6 +434,7 @@ body {
 }
 
 .section5 .article5-1 .trash {
+  font-family: "Pretendard-regular";
   font-size: 3vw;
   font-weight: 700;
 }
@@ -439,6 +449,7 @@ body {
 }
 
 .section5 .article5-2 .text_trash {
+  font-family: "Pretendard-regular";
   font-size: 1.3vw;
   font-weight: 700;
 }
@@ -479,6 +490,7 @@ body {
 }
 
 .section6 .article6-1 .water {
+  font-family: "Pretendard-regular";
   font-size: 3vw;
   font-weight: 700;
 }
@@ -493,6 +505,7 @@ body {
 }
 
 .section6 .article6-2 .text_water {
+  font-family: "Pretendard-regular";
   font-size: 1.3vw;
   font-weight: 700;
 }
@@ -551,6 +564,7 @@ body {
 }
 
 .section7 .article7-1 .box1 .text_hand {
+  font-family: "Pretendard-regular";
   font-size: 1.2vw;
   color: #808080;
   margin-top: 5vh;
@@ -586,6 +600,7 @@ body {
 }
 
 .section7 .article7-2 .box2 .flex .half {
+  font-family: "Pretendard-regular";
   font-size: 5.5vw;
   font-weight: 700;
   display: flex;
@@ -601,6 +616,7 @@ body {
 }
 
 .section7 .article7-2 .box2 .text_half {
+  font-family: "Pretendard-regular";
   font-size: 1.2vw;
   color: #808080;
   margin-top: 3vh;
@@ -636,6 +652,7 @@ body {
 }
 
 .section7 .article7-3 .box3 .flex .energy {
+  font-family: "Pretendard-regular";
   font-size: 5.5vw;
   font-weight: 700;
   display: flex;
@@ -651,6 +668,7 @@ body {
 }
 
 .section7 .article7-3 .box3 .text_energy {
+  font-family: "Pretendard-regular";
   font-size: 1.2vw;
   color: #808080;
   margin-top: 3vh;
@@ -676,6 +694,7 @@ body {
 }
 
 .section8 .article8-1 .text_notrash {
+  font-family: "Pretendard-regular";
   font-size: 2vw;
   font-weight: bold;
   display: flex;
@@ -708,6 +727,7 @@ body {
 .section9 .article9-1 img {
   width: 100%;
   height: 100%;
+  /* object-fit: contain; */
 }
 
 .section9 .article9-2 {
@@ -719,7 +739,8 @@ body {
 }
 
 .section9 .article9-2 .vision {
-  font-size: 3vw;
+  font-family: "Pretendard-regular";
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
@@ -743,7 +764,8 @@ body {
 
 .section9 .article9-3 .text_vision .text9-1 .vision1,
 .text9-2 .vision2 {
-  font-size: 2vw;
+  font-family: "Pretendard-regular";
+  font-size: 1.8vw;
   font-weight: bold;
 }
 
@@ -774,6 +796,7 @@ body {
 }
 
 .section10 .article10-1 .goto_next {
+  font-family: "Pretendard-regular";
   font-size: 1.5vw;
   font-weight: bold;
   color: #ffffff;
