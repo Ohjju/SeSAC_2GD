@@ -9,6 +9,10 @@ let a3_5 = document.querySelector(".article3-5");
 let a3_6 = document.querySelector(".article3-6");
 const a = [a3_0, a3_1, a3_2, a3_3, a3_4, a3_5];
 
+let t1 = document.querySelector(".article3-1 .temp1");
+let t2 = document.querySelector(".article3-2 .temp2");
+let t3 = document.querySelector(".article3-3 .temp3");
+
 let a0 = a3_0.offsetHeight;
 let a1 = a3_1.offsetHeight;
 let a2 = a3_2.offsetHeight;
@@ -24,35 +28,26 @@ let a0_4 = a0 + a1 + a2 + a3 + a4;
 let a0_5 = a0 + a1 + a2 + a3 + a4 + a5;
 let a0_6 = a0 + a1 + a2 + a3 + a4 + a5 + a6;
 
-// let margin = 700;
-// let saTriggerHeight = 0;
-// const saFunc = function () {
-//   for (let index = 0; index < 6; index++) {
-//     if (!a[index].classList.contains("show")) {
-//       saTriggerHeight = a[index].getBoundingClientRect().top + margin;
-
-//       if (window.innerHeight > saTriggerHeight) {
-//         a[index].classList.add("show");
-//       }
-//     }
-//   }
-// };
-// window.addEventListener("scroll", saFunc);
-
-window.addEventListener("wheel", () => {
-  let wheel = event.wheelDeltaY;
+window.addEventListener("wheel", (e) => {
+  let wheel = e.wheelDeltaY;
   if (wheel < 0) {
     if (scrollY > height1 + 200 && scrollY <= a0_1) {
       a3_0.classList.add("show");
     } else if (scrollY > a0_1 + 200 && scrollY <= a0_2) {
       a3_1.classList.add("show");
       a3_0.classList.remove("show");
+      t1.classList.add("font_17");
+      t1.style.transition = "0.5s";
     } else if (scrollY > a0_2 + 200 && scrollY <= a0_3) {
       a3_2.classList.add("show");
       a3_1.classList.remove("show");
+      t2.classList.add("font_17");
+      t2.style.transition = "0.5s";
     } else if (scrollY > a0_3 + 200 && scrollY <= a0_4) {
       a3_3.classList.add("show");
       a3_2.classList.remove("show");
+      t3.classList.add("font_17");
+      t3.style.transition = "0.5s";
     } else if (scrollY > a0_4 + 200 && scrollY <= a0_5) {
       a3_4.classList.add("show");
       a3_3.classList.remove("show");
@@ -66,21 +61,33 @@ window.addEventListener("wheel", () => {
       s3.style.opacity = "0";
       s3.style.transition = "0.5s";
     }
-  } else {
+  } else if (wheel > 0) {
     if (scrollY > height1 + 200 && scrollY <= a0_1) {
       a3_0.classList.remove("show");
     } else if (scrollY > a0_1 + 200 && scrollY <= a0_2) {
       a3_0.classList.add("show");
       a3_1.classList.remove("show");
+      t1.classList.remove("font_17");
+      t1.style.transition = "0.5s";
     } else if (scrollY > a0_2 + 200 && scrollY <= a0_3) {
       a3_1.classList.add("show");
       a3_2.classList.remove("show");
+      t1.classList.add("font_17");
+      t1.style.transition = "0.5s";
+      t2.classList.remove("font_17");
+      t2.style.transition = "0.5s";
     } else if (scrollY > a0_3 + 200 && scrollY <= a0_4) {
       a3_2.classList.add("show");
       a3_3.classList.remove("show");
+      t2.classList.add("font_17");
+      t2.style.transition = "0.5s";
+      t3.classList.remove("font_17");
+      t3.style.transition = "0.5s";
     } else if (scrollY > a0_4 + 200 && scrollY <= a0_5) {
       a3_3.classList.add("show");
       a3_4.classList.remove("show");
+      t3.classList.add("font_17");
+      t3.style.transition = "0.5s";
     } else if (scrollY > a0_5 + 200 && scrollY <= a0_6) {
       a3_4.classList.add("show");
       a3_5.classList.remove("show");
@@ -115,7 +122,7 @@ const Func4_1 = function () {
   if (window.innerHeight > a4_1height) {
     a4_1.style.opacity = "1";
     a4_1.style.transition = "1s";
-    a4_1.style.marginTop = "40px";
+    a4_1.style.marginTop = "50px";
     cloud.style.transform = "translate(500px, 0px)";
     cloud.style.scale = "1.6";
     cloud.style.transition = "1s";
@@ -289,23 +296,37 @@ let a7_2 = document.querySelector(".article7-2");
 let a7_3 = document.querySelector(".article7-3");
 const a7 = [a7_1, a7_2, a7_3];
 
-let i1 = document.querySelector(".box1 .flex");
-let i2 = document.querySelector(".box2 .flex");
-let i3 = document.querySelector(".box3 .flex");
+let i1 = document.querySelector(".box1 .flex i");
+let hand = document.querySelector(".box1 .flex .hand");
+let i2 = document.querySelector(".box2 .flex i");
+let half = document.querySelector(".box2 .flex .half");
+let i3 = document.querySelector(".box3 .flex i");
+let energy = document.querySelector(".box3 .flex .energy");
 const i = [i1, i2, i3];
+const title = [hand, half, energy];
 const color = ["color_blue", "color_orange", "color_green"];
 
 for (let index = 0; index < 3; index++) {
-  if (!i[index].classList.contains(color[index])) {
+  if (
+    !i[index].classList.contains(color[index]) &&
+    !title[index].classList.contains(color[index])
+  ) {
     a7[index].addEventListener("mouseover", function () {
       i[index].classList.add(color[index]);
+      title[index].classList.add(color[index]);
       i[index].classList.remove("color_off");
+      title[index].classList.remove("color_off");
     });
   }
-  if (!i[index].classList.contains("color_off")) {
+  if (
+    !i[index].classList.contains("color_off") &&
+    !title[index].classList.contains("color_off")
+  ) {
     a7[index].addEventListener("mouseleave", function () {
       i[index].classList.remove(color[index]);
+      title[index].classList.remove(color[index]);
       i[index].classList.add("color_off");
+      title[index].classList.add("color_off");
     });
   }
 }

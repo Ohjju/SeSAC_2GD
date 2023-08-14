@@ -1,37 +1,90 @@
-@font-face {
+/* @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
   font-weight: 400;
   font-style: normal;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
+  font-size: 1.3vw;
+  color: #1c1c1c;
+}
+
+p {
+  font-size: 1.3vw;
+  line-height: 150%;
 }
 
 body {
   background-color: #fcfcfc;
   margin: 0;
   max-width: 1920px;
-  /* display: flex; */
-  /* justify-content: center; */
   overflow-x: hidden;
 }
 
+/* 헤더 */
 .header {
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  height: 4vw;
+  z-index: 2;
   width: 100%;
+  height: 7vw;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+}
+.head_box1 {
+  color: white;
+  width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
-  z-index: 10;
+  justify-content: center;
 }
 
-.head1 {
-  font-size: 1.3vw;
+.head_box2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .head2 {
-  font-size: 1.3vw;
+  margin: 2vw;
+  color: rgb(0, 0, 0);
+}
+
+.head3 {
+  border: none;
+  margin: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 3vw;
+  color: white;
+  background-color: #13ae5c;
+}
+
+.head_box2 .campaign:hover {
+  cursor: pointer;
+  color: #13ae5c;
+}
+
+.head_box2 .donate:hover {
+  cursor: pointer;
+  color: #13ae5c;
+}
+
+.head_box2 .diy:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s;
 }
 
 /* 기타 class */
@@ -74,6 +127,34 @@ body {
   transition: 0.5s;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.color_2c {
+  color: #2c2c2c;
+}
+
+.color_5c {
+  color: #7c7c7cd3;
+}
+
+.green {
+  color: #13ae5c;
+}
+
+.red {
+  color: #eb2a00;
+}
+
+.font_15 {
+  font-size: 1.5vw;
+}
+
+.font_17 {
+  font-size: 1.7vw;
+}
+
 /* section1 시작 */
 .section1 {
   max-width: 100vw;
@@ -93,6 +174,7 @@ body {
 .section1 .article1-1 .background {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .section1 .article1-2 {
@@ -129,31 +211,10 @@ body {
 }
 
 .section1 .article1-4 .About {
-  font-family: "Pretendard-regular";
+  /* font-family: "Pretendard-regular"; */
   font-size: 7.5vw;
   font-weight: bold;
 }
-
-/* section2 시작 */
-/* .section2 {
-  box-sizing: border-box;
-  max-width: 100vw;
-  height: 100%;
-  margin-bottom: 20vh;
-}
-
-.section2 .article2-1 {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section2 .article2-1 .text_start {
-  font-size: 2.5vw;
-  font-weight: bold;
-} */
 
 /* section3 시작 */
 .section3 {
@@ -173,7 +234,7 @@ body {
 
 .sa {
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .show {
@@ -181,14 +242,6 @@ body {
   transition: all 0.5s ease;
 }
 /* 애니메이션 끝 */
-
-.green {
-  color: #13ae5c;
-}
-
-.red {
-  color: #eb2a00;
-}
 
 .section3 .article3-0,
 .article3-1,
@@ -206,19 +259,17 @@ body {
 }
 
 .section3 .article3-0 .text_start {
-  font-family: "Pretendard-regular";
   font-size: 2.5vw;
-  font-weight: bold;
 }
 
-.section3 .article3-1,
-.article3-2,
-.article3-3,
-.article3-4,
-.article3-5 p {
-  font-family: "Pretendard-regular";
-  font-size: 1.5vw;
-  font-weight: bold;
+.temp1,
+.temp2,
+.temp3 {
+  margin-top: 20px;
+}
+
+.text_temp {
+  margin-top: 40px;
 }
 
 .section3 .article3-4 .text_temp,
@@ -233,10 +284,6 @@ body {
   padding-left: 7px;
 }
 
-.section3 .article3-5 .temp1 {
-  margin-bottom: 0px;
-}
-
 .section3 .article3-5 .temp2 {
   margin-top: 0px;
 }
@@ -249,23 +296,17 @@ body {
 }
 
 .section3 .article3-5 .temp1-5 .text_temp1-5 {
-  font-family: "Pretendard-regular";
-  font-size: 1.5vw;
-  font-weight: 700;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   margin-right: 20px;
 }
 
 .section3 .article3-5 .temp1-5 .redLine {
   width: 50vw;
-  height: 3px;
+  height: 2.4px;
   background-color: #eb2a00;
 }
 
 /* section4 시작하면서 헤더 바뀜 */
-/* 배경 scroll 이벤트 주기 위해서 따로 뺌 */
 .gray_header {
   box-sizing: border-box;
   display: flex;
@@ -285,34 +326,20 @@ body {
 }
 
 .gray_header .menu1 {
-  font-family: "Pretendard-regular";
-  font-size: 12px;
-  /* 폰트가 10px이하로는 적용되지 않음...기본세팅! => zoom으로 해결 */
-  font-weight: bold;
   margin: 0 16px;
-  padding: 7px 14px;
+  padding: 6px 12px;
   z-index: 1;
 }
 
 .gray_header .menu2 {
-  font-family: "Pretendard-regular";
-  font-size: 12px;
-  font-weight: bold;
   margin: 0 16px;
-  padding: 7px 14px;
-  /* background-color: #1c1c1c;
-  color: #ffffff; */
+  padding: 6px 12px;
   z-index: 1;
 }
 
 .gray_header .menu3 {
-  font-family: "Pretendard-regular";
-  font-size: 12px;
-  font-weight: bold;
   margin: 0 16px;
-  padding: 7px 14px;
-  /* background-color: #1c1c1c;
-  color: #ffffff; */
+  padding: 6px 12px;
   z-index: 1;
 }
 
@@ -334,17 +361,16 @@ body {
   grid-template-rows: repeat(12, 1fr);
   column-gap: 30px;
 }
-
+/* 
 .section4 #cloud {
   transform: translateY(400px);
   font-size: 500px;
   color: #adadad45;
   position: absolute;
   z-index: -1;
-}
+} */
 
 .section4 .article4-1 {
-  margin-top: 30px;
   grid-column: 2/6;
   grid-row: 7/9;
   display: flex;
@@ -354,9 +380,8 @@ body {
 }
 
 .section4 .article4-1 .carbon {
-  font-family: "Pretendard-regular";
   font-size: 3vw;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .section4 .article4-2 {
@@ -366,12 +391,6 @@ body {
   align-items: center;
   opacity: 0;
   margin-top: 40px;
-}
-
-.section4 .article4-2 .text_carbon {
-  font-family: "Pretendard-regular";
-  font-size: 1.3vw;
-  font-weight: 700;
 }
 
 .section4 .article4-3 {
@@ -413,14 +432,14 @@ body {
   column-gap: 30px;
 }
 
-.section5 #trash {
+/* .section5 #trash {
   font-family: "Pretendard-regular";
   transform: translateY(200px);
   font-size: 400px;
   color: #adadad45;
   position: absolute;
   z-index: -1;
-}
+} */
 
 .section5 .article5-1 {
   grid-column: 2/12;
@@ -432,9 +451,8 @@ body {
 }
 
 .section5 .article5-1 .trash {
-  font-family: "Pretendard-regular";
   font-size: 3vw;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .section5 .article5-2 {
@@ -444,12 +462,6 @@ body {
   align-items: center;
   opacity: 0;
   margin-top: 50px;
-}
-
-.section5 .article5-2 .text_trash {
-  font-family: "Pretendard-regular";
-  font-size: 1.3vw;
-  font-weight: 700;
 }
 
 .section5 .article5-3 {
@@ -488,9 +500,8 @@ body {
 }
 
 .section6 .article6-1 .water {
-  font-family: "Pretendard-regular";
   font-size: 3vw;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .section6 .article6-2 {
@@ -500,12 +511,6 @@ body {
   align-items: center;
   opacity: 0;
   margin-top: 50px;
-}
-
-.section6 .article6-2 .text_water {
-  font-family: "Pretendard-regular";
-  font-size: 1.3vw;
-  font-weight: 700;
 }
 
 /* section7 시작*/
@@ -562,9 +567,6 @@ body {
 }
 
 .section7 .article7-1 .box1 .text_hand {
-  font-family: "Pretendard-regular";
-  font-size: 1.2vw;
-  color: #808080;
   margin-top: 5vh;
   display: flex;
   flex-direction: column;
@@ -598,7 +600,6 @@ body {
 }
 
 .section7 .article7-2 .box2 .flex .half {
-  font-family: "Pretendard-regular";
   font-size: 5.5vw;
   font-weight: 700;
   display: flex;
@@ -614,9 +615,6 @@ body {
 }
 
 .section7 .article7-2 .box2 .text_half {
-  font-family: "Pretendard-regular";
-  font-size: 1.2vw;
-  color: #808080;
   margin-top: 3vh;
   display: flex;
   flex-direction: column;
@@ -650,7 +648,6 @@ body {
 }
 
 .section7 .article7-3 .box3 .flex .energy {
-  font-family: "Pretendard-regular";
   font-size: 5.5vw;
   font-weight: 700;
   display: flex;
@@ -666,9 +663,6 @@ body {
 }
 
 .section7 .article7-3 .box3 .text_energy {
-  font-family: "Pretendard-regular";
-  font-size: 1.2vw;
-  color: #808080;
   margin-top: 3vh;
   display: flex;
   flex-direction: column;
@@ -692,17 +686,17 @@ body {
 }
 
 .section8 .article8-1 .text_notrash {
-  font-family: "Pretendard-regular";
-  font-size: 2vw;
-  font-weight: bold;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.section8 .article8-1 .text_notrash .text8-1 {
+.section8 .article8-1 .text_notrash .text8-1,
+.text8-2 {
   margin-bottom: 1.5vh;
+  font-size: 2.5vw;
 }
 
 /* section9 */
@@ -737,7 +731,6 @@ body {
 }
 
 .section9 .article9-2 .vision {
-  font-family: "Pretendard-regular";
   font-size: 3vw;
   font-weight: bold;
 }
@@ -762,9 +755,8 @@ body {
 
 .section9 .article9-3 .text_vision .text9-1 .vision1,
 .text9-2 .vision2 {
-  font-family: "Pretendard-regular";
   font-size: 2vw;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* section10 */
@@ -779,7 +771,7 @@ body {
 }
 
 .section10 .article10-1 {
-  width: 20vw;
+  width: 15vw;
   height: 10vh;
   background-color: #13ae5c;
   display: flex;
@@ -794,7 +786,6 @@ body {
 }
 
 .section10 .article10-1 .goto_next {
-  font-family: "Pretendard-regular";
   font-size: 1.5vw;
   font-weight: bold;
   color: #ffffff;
