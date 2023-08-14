@@ -43,7 +43,11 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.head_box1 img {
+  margin: 2vw;
 }
 
 .head_box2 {
@@ -135,8 +139,8 @@ body {
   color: #2c2c2c;
 }
 
-.color_5c {
-  color: #7c7c7cd3;
+.color_7c {
+  color: #7c7c7c8c;
 }
 
 .green {
@@ -696,7 +700,7 @@ body {
 .section8 .article8-1 .text_notrash .text8-1,
 .text8-2 {
   margin-bottom: 1.5vh;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
 }
 
 /* section9 */
