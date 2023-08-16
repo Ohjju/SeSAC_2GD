@@ -1,11 +1,3 @@
-/* @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -31,12 +23,13 @@ body {
 .header {
   z-index: 2;
   width: 100%;
-  height: 7vw;
+  height: 5.3vw;
   display: flex;
   position: fixed;
   align-items: center;
   justify-content: space-between;
 }
+
 .head_box1 {
   color: white;
   width: 50%;
@@ -314,13 +307,14 @@ body {
 .gray_header {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   opacity: 0;
+  /* width: 65%; */
   width: 100%;
-  padding: 13px 0;
+  padding: 1vw 0;
   z-index: 1;
 }
 
@@ -329,22 +323,53 @@ body {
   color: #ffffff;
 }
 
+.gray_header img {
+  margin: 0 2vw;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.gray_header .menu {
+  display: flex;
+  margin-left: 11vw;
+}
+
 .gray_header .menu1 {
-  margin: 0 16px;
+  /* margin: 0 30px; */
+  margin: 0 2vw;
   padding: 6px 12px;
   z-index: 1;
 }
 
 .gray_header .menu2 {
-  margin: 0 16px;
+  /* margin: 0 30px; */
+  margin: 0 2vw;
   padding: 6px 12px;
   z-index: 1;
 }
 
 .gray_header .menu3 {
-  margin: 0 16px;
+  /* margin: 0 30px; */
+  margin: 0 2vw;
   padding: 6px 12px;
   z-index: 1;
+}
+
+.gray_header .about_page {
+  /* margin: 0 30px; */
+  /* margin: 0 2vw; */
+  /* padding: 6px 12px; */
+  z-index: 1;
+}
+
+.gray_header .about_page .text_about {
+  font-size: 7vw;
+  font-weight: 600;
+  line-height: 0%;
+  letter-spacing: -6px;
+  color: #1313130b;
 }
 
 .backdrop {
@@ -687,6 +712,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section8 .article8-0 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: -1;
+}
+
+.section8 .article8-0 .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8cff834d 10px, #fcfcfc 90px);
+  position: absolute;
+  z-index: -1;
 }
 
 .section8 .article8-1 .text_notrash {
