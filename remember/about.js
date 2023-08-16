@@ -36,17 +36,17 @@ window.addEventListener("wheel", (e) => {
     } else if (scrollY > a0_1 + 200 && scrollY <= a0_2) {
       a3_1.classList.add("show");
       a3_0.classList.remove("show");
-      t1.classList.add("font_17");
+      t1.classList.add("font_22");
       t1.style.transition = "0.5s";
     } else if (scrollY > a0_2 + 200 && scrollY <= a0_3) {
       a3_2.classList.add("show");
       a3_1.classList.remove("show");
-      t2.classList.add("font_17");
+      t2.classList.add("font_22");
       t2.style.transition = "0.5s";
     } else if (scrollY > a0_3 + 200 && scrollY <= a0_4) {
       a3_3.classList.add("show");
       a3_2.classList.remove("show");
-      t3.classList.add("font_17");
+      t3.classList.add("font_22");
       t3.style.transition = "0.5s";
     } else if (scrollY > a0_4 + 200 && scrollY <= a0_5) {
       a3_4.classList.add("show");
@@ -67,26 +67,26 @@ window.addEventListener("wheel", (e) => {
     } else if (scrollY > a0_1 + 200 && scrollY <= a0_2) {
       a3_0.classList.add("show");
       a3_1.classList.remove("show");
-      t1.classList.remove("font_17");
+      t1.classList.remove("font_22");
       t1.style.transition = "0.5s";
     } else if (scrollY > a0_2 + 200 && scrollY <= a0_3) {
       a3_1.classList.add("show");
       a3_2.classList.remove("show");
-      t1.classList.add("font_17");
+      t1.classList.add("font_22");
       t1.style.transition = "0.5s";
-      t2.classList.remove("font_17");
+      t2.classList.remove("font_22");
       t2.style.transition = "0.5s";
     } else if (scrollY > a0_3 + 200 && scrollY <= a0_4) {
       a3_2.classList.add("show");
       a3_3.classList.remove("show");
-      t2.classList.add("font_17");
+      t2.classList.add("font_22");
       t2.style.transition = "0.5s";
-      t3.classList.remove("font_17");
+      t3.classList.remove("font_22");
       t3.style.transition = "0.5s";
     } else if (scrollY > a0_4 + 200 && scrollY <= a0_5) {
       a3_3.classList.add("show");
       a3_4.classList.remove("show");
-      t3.classList.add("font_17");
+      t3.classList.add("font_22");
       t3.style.transition = "0.5s";
     } else if (scrollY > a0_5 + 200 && scrollY <= a0_6) {
       a3_4.classList.add("show");
