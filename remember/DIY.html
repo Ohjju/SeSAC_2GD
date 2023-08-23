@@ -8,67 +8,84 @@
       src="https://kit.fontawesome.com/78e0634373.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="./DIY.css" />
-    <script defer src="./DIY.js"></script>
+    <link rel="stylesheet" href="../css/DIY.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="icon" href="../image/Group 25.png" />
+    <script defer src="../js/DIY.js"></script>
   </head>
+
   <body>
     <header class="header">
       <div class="head_box1">
-        <img src="../image/about_img/logo.png" style="width: 25%" />
+        <a href="../index.html" style="border: none"
+          ><img src="../image/logo.png" style="width: 50%"
+        /></a>
       </div>
       <div class="head_box2">
-        <div class="head2 about">About</div>
-        <div class="head2 campaign">Campaign</div>
-        <div class="head2 donate">후원하기</div>
-        <button class="head3 diy">DIY</button>
+        <a href="../html/about.html" style="border: none">
+          <div class="head2 about">About</div>
+        </a>
+        <a href="../html/campaign.html" style="border: none">
+          <div class="head2 campaign">Campaign</div>
+        </a>
+        <a href="../html/donation1.html" style="border: none">
+          <div class="head2 donate">후원하기</div>
+        </a>
+        <a href="../html/DIY.html" style="border: none"
+          ><button class="head3 diy">DIY</button></a
+        >
       </div>
     </header>
     <section class="section1">
       <article class="article1-1">
         <p>아직 업사이클링이 생소하다면?</p>
       </article>
-      <article class="article1-2"><p>나만의 업사이클링 제품</p></article>
-      <div class="line"><div class="lightgreen_line"></div></div>
-      <article class="article1-3"><p>직접 만들어보세요!</p></article>
+      <article class="article1-2">
+        <p>나만의 업사이클링 제품</p>
+      </article>
+      <div class="line">
+        <div class="lightgreen_line"></div>
+      </div>
+      <article class="article1-3">
+        <p>직접 만들어보세요!</p>
+      </article>
       <article class="article1-4">
-        <img src="../image/about_img/about5.jpg" alt="" />
+        <img src="../image/about_img/diy1.jpg" alt="" />
       </article>
       <article class="article1-5">
-        <img src="../image/about_img/about6.jpg" alt="" />
+        <img src="../image/about_img/diy2.jpg" alt="" />
       </article>
       <article class="article1-6">
-        <img src="../image/about_img/about4.jpg" alt="" />
+        <img src="../image/about_img/diy3.jpg" alt="" />
       </article>
+    </section>
+
+    <section class="section5">
+      <img
+        src="../image/Frame 97.jpg"
+        alt=""
+        class="section4_img"
+        style="width: 100%"
+      />
     </section>
 
     <section class="section2">
       <div class="container">
         <div class="box1">
-          <div class="menubar">
-            사용법이 궁금 하신가요?
-            <div class="info">
-              <img
-                src="../image/free-animated-icon-info-10468726.gif"
-                style="width: 100%"
-              />
-            </div>
-          </div>
-
           <div id="product">
-            <div
-              id="product2"
-              style="
-                position: absolute;
-                width: 40vw;
-                height: 40vw;
-                border: none;
-              "
-            ></div>
+            <div id="product2"></div>
             <div id="outputDiv" class="outputDiv"></div>
           </div>
         </div>
@@ -76,7 +93,7 @@
           <div class="box2_contain">
             <div class="box2_contain_scroll">
               <div class="box2_contain_text1">
-                <a style="font-size: 1.5vw">상품을 선택하세요</a>
+                <p class="p_text">상품</p>
               </div>
               <div class="box2_contain_choice">
                 <div
@@ -102,34 +119,7 @@
                 ></div>
               </div>
               <div class="box2_contain_text1">
-                <a style="font-size: 1.2vw"> 재질</a>
-              </div>
-              <div class="box2_contain_texture">
-                <div
-                  class="texture_option"
-                  style="
-                    background-image: url(../image/sj-objio-XFWiZTa2Ub0-unsplash.jpg);
-                    background-size: cover;
-                  "
-                ></div>
-                <div
-                  class="texture_option"
-                  style="
-                    background-image: url(../image/dynamic-wang-UtUa7GYW300-unsplash.jpg);
-                    background-size: cover;
-                  "
-                ></div>
-                <div
-                  class="texture_option"
-                  style="
-                    background-image: url(../image/augustine-wong-3Om4DHcaAc0-unsplash.jpg);
-                    background-size: cover;
-                  "
-                ></div>
-                <button class="texture_option">X</button>
-              </div>
-              <div class="box2_contain_text1">
-                <a style="font-size: 1.2vw"> 색상</a>
+                <p class="p_text">색상</p>
               </div>
               <div class="box2_contain_color">
                 <div
@@ -163,59 +153,53 @@
                 ></div>
                 <div
                   class="color-option"
-                  style="background-color: #425694"
-                ></div>
-                <div
-                  class="color-option"
-                  style="background-color: #a4f3cb"
-                ></div>
-                <div
-                  class="color-option"
-                  style="background-color: rgb(18, 182, 29)"
-                ></div>
-                <div
-                  class="color-option"
                   style="background-color: none; border: 1px solid black"
                 ></div>
               </div>
               <div class="box2_contain_text1">
-                <a style="font-size: 1.2vw"> 문자</a>
+                <p class="p_text">소재</p>
+              </div>
+              <div class="box2_contain_texture">
+                <div
+                  class="texture_option"
+                  style="
+                    background-image: url(../image/sj-objio-XFWiZTa2Ub0-unsplash.jpg);
+                    background-size: auto;
+                  "
+                ></div>
+                <div
+                  class="texture_option"
+                  style="
+                    background-image: url(../image/pngwing.com.png);
+                    background-size: contain;
+                  "
+                ></div>
+                <div
+                  class="texture_option"
+                  style="
+                    background-image: url(../image/augustine-wong-3Om4DHcaAc0-unsplash.jpg);
+                    background-size: cover;
+                  "
+                ></div>
+                <button class="texture_option">X</button>
+              </div>
+
+              <div class="box2_contain_text1">
+                <p class="p_text">문자</p>
               </div>
 
               <div class="box2_contain_txt">
-                <input
-                  id="inputText"
-                  placeholder=""
-                  style="width: 23vw; border-radius: 10px"
-                /><input />
-
+                <input id="inputText" placeholder="" />
                 <button id="submitButton">입력하기</button>
+                <input type="button" id="deleteButton" value="삭제하기" />
               </div>
               <div class="box2_contain_text1">
-                <a style="font-size: 1.2vw"> 크기 및 색상</a>
+                <p class="p_text">크기 및 색상</p>
               </div>
               <div class="fontoption">
                 <button id="fontPlus">+</button>
                 <button id="fontMinus">-</button>
                 <input type="color" id="inputColor" /><br />
-              </div>
-              <div class="box2_contain_text1">
-                <a style="font-size: 1.2vw"> 서체선택</a>
-              </div>
-              <div class="dropdown">
-                <div class="dropbtn">Dropdown</div>
-                <div class="dropdown-content">
-                  <a class="font-option" data-font="ClimateCrisisKRVF"
-                    >기후위기-한글체</a
-                  >
-                  <a
-                    class="font-option"
-                    style="font-family: KBO-Dia-Gothic_bold"
-                    >KBO 다이아고딕체</a
-                  >
-                  <a class="font-option" data-font="IAMAPLAYER">IAMAPLAYER</a>
-                  <a class="font-option" data-font="Ramche">Ramche</a>
-                </div>
               </div>
             </div>
 
@@ -228,15 +212,23 @@
     </section>
 
     <section class="section3">
-      <article class="article3-1"><p>나만의 업사이클링 제품 만들고</p></article>
-      <article class="article3-2"><p>SNS에 공유해보세요!</p></article>
-      <article class="article3-3"><p>#DIY #업사이클링 #환경지킴이</p></article>
+      <article class="article3-1">
+        <p>나만의 업사이클링 제품 만들고</p>
+      </article>
+      <article class="article3-2">
+        <p>SNS에 공유해보세요!</p>
+      </article>
+      <article class="article3-3">
+        <p>#DIY #업사이클링 #환경지킴이</p>
+      </article>
       <article class="article3-4">
-        <!-- <i class="fa-solid fa-arrow-right"></i> -->
-        <!-- <i class="fa-solid fa-angles-right"></i> -->
-        <!-- <i class="fa-solid fa-caret-right"></i> -->
         <i class="fa-solid fa-square-up-right"></i>
-        <nav class="share">게시물 보러가기</nav>
+        <a
+          href="http://www.tcpschool.com/html-tags/nav"
+          class="share"
+          style="font-family: Pretendard; border: none"
+          >게시물 보러가기</a
+        >
       </article>
     </section>
 
@@ -251,5 +243,41 @@
         <img class="shadow" src="../image/about_img/insta3.png" alt="" />
       </article>
     </section>
+
+    <hr color="#5A5A5A" size="1" />
+    <footer>
+      <article class="f1">
+        <div class="teammates">
+          <p class="color_82 font_600">teammates</p>
+          <div class="content_center">
+            <p class="name1 color_82">오주현</p>
+            <p class="name2 color_82">최가은</p>
+            <p class="name3 color_82">한진수</p>
+            <p class="name4 color_82">서유민</p>
+          </div>
+        </div>
+        <div class="contect">
+          <p class="color_82 font_600">contect</p>
+          <div class="content_center">
+            <a
+              href="#"
+              class="insta color_82"
+              style="border: none; font-family: Pretendard"
+              >Instagram</a
+            >
+          </div>
+        </div>
+      </article>
+      <article class="f2">
+        <div class="page">
+          <div class="content_end">
+            <p class="team_name color_82 font_600">team: 기억해조</p>
+            <p class="team_vision color_82 font_600">
+              환경문제보존에 대한 사회적 가치 만들기
+            </p>
+          </div>
+        </div>
+      </article>
+    </footer>
   </body>
 </html>
