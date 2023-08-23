@@ -14,19 +14,31 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="../css/about1.css" />
-    <script defer src="../js/about1.js"></script>
+
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="icon" href="../image/Group 25.png" />
+    <script defer src="../js/about.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="head_box1">
-        <img src="../image/about_img/logo.png" style="width: 25%" />
+        <a href="../index.html"
+          ><img src="../image/logo.png" style="width: 50%"
+        /></a>
       </div>
       <div class="head_box2">
-        <div class="head2 green">About</div>
-        <div class="head2 campaign">Campaign</div>
-        <div class="head2 donate">후원하기</div>
-        <button class="head3 diy">DIY</button>
+        <a href="../html/about.html"
+          ><div class="head2 about green">About</div></a
+        >
+        <a href="../html/campaign.html"
+          ><div class="head2 campaign">Campaign</div></a
+        >
+        <a href="../html/donation1.html"
+          ><div class="head2 donate">후원하기</div></a
+        >
+        <a href="../html/DIY.html"><button class="head3 diy">DIY</button></a>
       </div>
     </header>
     <!-- section1 -->
@@ -121,7 +133,7 @@
         <div class="temp1-5">
           <div class="text_temp1-5">
             <!-- <p>1.5도</p> -->
-            <p class="red bold font_17">1.5도</p>
+            <p class="red bold font_17">1.5도 ></p>
           </div>
           <div class="redLine"></div>
         </div>
@@ -298,8 +310,39 @@
     <!-- setion10 -->
     <section class="section10">
       <article class="article10-1">
-        <nav class="goto_next">활동 보러가기</nav>
+        <a href="../html/campaign.html" class="goto_next">활동 보러가기</a>
       </article>
     </section>
+
+    <hr color="#5A5A5A" size="1" />
+    <footer>
+      <article class="f1">
+        <div class="teammates">
+          <p class="color_82 font_600">teammates</p>
+          <div class="content_center">
+            <p class="name1 color_82">오주현</p>
+            <p class="name2 color_82">최가은</p>
+            <p class="name3 color_82">한진수</p>
+            <p class="name4 color_82">서유민</p>
+          </div>
+        </div>
+        <div class="contect">
+          <p class="color_82 font_600">contect</p>
+          <div class="content_center">
+            <a href="#" class="insta color_82">Instagram</a>
+          </div>
+        </div>
+      </article>
+      <article class="f2">
+        <div class="page">
+          <div class="content_end">
+            <p class="team_name color_82 font_600">team: 기억해조</p>
+            <p class="team_vision color_82 font_600">
+              환경문제보존에 대한 사회적 가치 만들기
+            </p>
+          </div>
+        </div>
+      </article>
+    </footer>
   </body>
 </html>
