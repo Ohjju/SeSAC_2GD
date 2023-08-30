@@ -139,9 +139,9 @@ const firstSectionImg = [
 index = 1;
 index2 = 1;
 itemWidth = c_item.offsetWidth;
+itemWidth = c_item.offsetWidth;
 section1.addEventListener("click", function () {
   items.style.transform = `translate(${-itemWidth * index2}px,0%)`;
-
   items.style.transition = "0.6s cubic-bezier(0, 0.6, 0.4, 1)";
   // click할 때마다 위치가 다시 처음으로 돌아가서 이동하므로 이동거리를 계속 증가시켜줌
   index2 += 1;
