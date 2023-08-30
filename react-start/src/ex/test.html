@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function test(e) {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.currentTarget);
+      }
+    </script>
+  </head>
+  <body>
+    <div onclick="test(this)">div</div>
+    <p>
+      <span>안녕</span>
+    </p>
+  </body>
+</html>
