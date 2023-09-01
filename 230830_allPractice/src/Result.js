@@ -5,7 +5,7 @@ function Result(props) {
   // 하나로 합쳤을 경우임
 
   //단축하지 않으면
-  //const fruit = props.data.fruit
+  // const fruit = props.data.fruit
   const { fruit, backgroundColor, color, content } = props;
 
   return (

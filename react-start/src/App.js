@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ClassCom from "./components/ClassCom";
 import { ClassProps, ClassProps2 } from "./components/ClassProps";
 // export default가 아니기 때문에 {}안에 감싸서 import 해주어야함
@@ -12,10 +12,81 @@ import UseStatePractice from "./components/practice/UseStatePractice";
 import Handler_ex from "./ex/Handler_ex";
 import Color from "./ex/Color";
 import Show from "./ex/Show";
-import Fruit from "./ex/Fruit";
+import DOMComponent from "./ex/DOMComponent";
+import Background from "./ex/Background";
+import Number from "./ex/Number";
+import RefVarState from "./ex/RefVarState";
+import ConditionalOne from "./ex/ConditionalOne";
+import ConditionalTwo from "./ex/ConditionalTwo";
+import EffectComponent from "./ex/EffectComponent";
+import TestUseEffect from "./ex/TestUseEffect";
+import TimerComponent from "./ex/TimerComponent";
+import PracticeTimerState from "./ex/PracticeTimerState";
+import PracticeTimerVariable from "./ex/PracticeTimerVariable";
+import PracticeTimerRef from "./ex/PracticeTimerRef";
 // import React, { useState } from "react";
 
 function App() {
+  // show true일때만 실행 -> TestuseEffect에서
+  // const [show, setShow] = useState(true);
+  // const buttonRef = useRef(null);
+  // useEffect(() => {
+  //   buttonRef.current?.focus();
+  // });
+  const [state, setState] = useState(true);
+  const clickEvent = () => {
+    setState((prev) => !prev);
+  };
+
+  return (
+    <>
+      {/* <DOMComponent />
+      <DOMComponent />
+      <DOMComponent />
+
+      <Background></Background> */}
+      {/* <Number></Number> */}
+      {/* <RefVarState></RefVarState> */}
+
+      {state && <ConditionalOne text={"conditionalOne"} />}
+      {!state && <ConditionalTwo text={"conditionalTwo"} />}
+      <div>
+        <button onClick={clickEvent}>변경!</button>
+      </div>
+
+      {/* <button>
+        {show ? (
+          <ConditionalOne text={"conditionOne"}></ConditionalOne>
+        ) : (
+          <ConditionalTwo text={"conditionTwo"}></ConditionalTwo>
+        )}
+      </button> */}
+
+      {/* <EffectComponent></EffectComponent> */}
+      {/* {show && <TestUseEffect></TestUseEffect>} */}
+      {/* {show && <TimerComponent></TimerComponent>}
+      <button
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        버튼
+      </button> */}
+
+      {/* {show && <PracticeTimerState></PracticeTimerState>} */}
+      {/* {show && <PracticeTimerVariable></PracticeTimerVariable>} */}
+      {/* {show && <PracticeTimerRef></PracticeTimerRef>}
+      <button
+        ref={buttonRef}
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        {!show ? "보이기" : "숨기기"}
+      </button> */}
+    </>
+  );
+
   // function test(text) {
   //   console.log(text);
   // }
@@ -26,19 +97,19 @@ function App() {
   //   console.log(e);
   //   e.preventDefault();
   // };
-  return (
-    <>
-      {/* <a href="https://naver.com" onclick={handleClick}>
-        a 태그입니다.
-      </a>
-      <button onClick={() => test("안녕")}>버튼</button>
-      <button onClick={testExec}>버튼</button>
-      <Handler_ex></Handler_ex>
-      <Color></Color>
-      <Show></Show> */}
-      <Fruit></Fruit>
-    </>
-  );
+  // return (
+  //   <>
+  //
+  //     {/* <a href="https://naver.com" onclick={handleClick}>
+  //       a 태그입니다.
+  //     </a>
+  //     <button onClick={() => test("안녕")}>버튼</button>
+  //     <button onClick={testExec}>버튼</button> */}
+  //     {/* <Handler_ex></Handler_ex>
+  //     <Color></Color>
+  //     <Show></Show> */}
+  //   </>
+  // );
   // return (
   //   <div>
   //     <UseJSX></UseJSX>
