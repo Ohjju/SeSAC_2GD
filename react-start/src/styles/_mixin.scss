@@ -1,0 +1,41 @@
+//매개변수 없는 경우
+@mixin square1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+// 매개변수 있는 경우
+@mixin circle($circleColor, $circleOpacity) {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: inline-block;
+  background-color: $circleColor;
+  opacity: $circleOpacity;
+}
+
+@mixin square2(
+  $squareBgColor: pink,
+  $squareFontSize: 16px,
+  $squareFontColor: #fff
+) {
+  // square1꺼 가져옴
+  @include square1();
+  line-height: 100px;
+  text-align: center;
+  background-color: $squareBgColor;
+  font-size: $squareFontSize;
+  color: $squareFontColor;
+
+  @if $squareBgColor==yellow {
+    border-radius: 50%;
+    opacity: 0.2;
+  } @else if $squareBgColor==black {
+    border-radius: 20%;
+  } @else {
+    border-radius: 10%;
+  }
+}
