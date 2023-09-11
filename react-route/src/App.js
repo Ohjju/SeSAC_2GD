@@ -1,9 +1,12 @@
+import "./styles/global.css";
 import { Route, Routes } from "react-router-dom";
 import { Profile } from "./page/Profile";
 import { Board } from "./page/Board";
 import { Index } from "./page/Index";
 import { NotFound } from "./page/NotFound";
 import BoardDetail from "./page/BoardDetail";
+import { Practice } from "./page/Practice";
+import { Student } from "./page/Student";
 
 function App() {
   return (
@@ -12,9 +15,11 @@ function App() {
         <Route path="/" element={<Index></Index>} />
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/board" element={<Board></Board>}></Route>
+        <Route path="/practice" element={<Practice></Practice>}></Route>
+        <Route path="/student/:studentName" element={<Student />}></Route>
+        <Route path="/board/:boardID" element={<BoardDetail />}></Route>
         {/* 그 외의 모든 것에게 NotFound를 import */}
         <Route path="*" element={<NotFound></NotFound>}></Route>
-        <Route path="/board/:boardID" element={<BoardDetail />}></Route>
       </Routes>
     </>
   );
