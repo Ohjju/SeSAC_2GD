@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Practice = () => {
+  //styled-components 지정
   const Nav = styled.nav`
     width: 100%;
     display: flex;

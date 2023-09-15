@@ -12,10 +12,12 @@ function App() {
   return (
     <>
       <Routes>
+        {/* 경로는 여기에 다 선언해주어야 함!! */}
         <Route path="/" element={<Index></Index>} />
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/board" element={<Board></Board>}></Route>
         <Route path="/practice" element={<Practice></Practice>}></Route>
+        {/* :뒤에 붙는 단어가 뒤에 계속 사용됨 */}
         <Route path="/student/:studentName" element={<Student />}></Route>
         <Route path="/board/:boardID" element={<BoardDetail />}></Route>
         {/* 그 외의 모든 것에게 NotFound를 import */}
