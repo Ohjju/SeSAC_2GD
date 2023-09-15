@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../styles/style.scss";
 import "../styles/__root.scss";
+import "../styles/main_location.scss";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
@@ -8,58 +9,69 @@ import { styled } from "@mui/material/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
-  textAlign: "center",
   color: theme.palette.text.secondary,
-  height: "13rem",
-  lineHeight: "13rem",
+  width: "298px",
+  height: "240px",
+  lineHeight: "240px",
   borderRadius: "35px",
 }));
 
 export default function MainLocation() {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          paddingLeft: "10vw",
-          paddingRight: "10vw",
-        }}
-      >
-        <h4>일상 산책러를 위한</h4>
-        <h4>산보만보의 프로그램을 만나보세요</h4>
-        <p>#태그 #태그 #태그</p>
-        <Grid container spacing={3} paddingBottom={5} paddingTop={5}>
-          <Grid item xs={6}>
-            <Box
-              sx={{
-                p: 6,
+      <div className="sec02-container">
+        <div className="sec02-title">
+          <h4>일상 산책러를 위한</h4>
+          <h4>산보만보의 프로그램을 만나보세요</h4>
+          <p className="sec02-padTop">
+            #관공사 추천 걷기여행길 #친구랑 걷기 좋은 코스 #커플 데이트 코스
+          </p>
+        </div>
 
-                bgcolor: "background.default",
-                display: "grid",
-                gridTemplateColumns: { md: "1fr 1fr" },
-                gap: 2,
-                padding: 0,
-              }}
-            >
-              <Item>elevation1</Item>
-              <Item>elevation2</Item>
-            </Box>
-          </Grid>
-          <Grid item xs={6}>
+        <Grid container spacing={4}>
+          {/* xs=12가 가로 전체 */}
+          <Grid item xs={12}>
             <Box
               sx={{
-                p: 6,
                 bgcolor: "background.default",
-                display: "grid",
-                gridTemplateColumns: { md: "1fr 1fr" },
                 gap: 2,
-                padding: 0,
+                display: "flex",
+                paddingTop: "3rem",
+                paddingBottom: "2rem",
               }}
             >
-              <Item>elevation3</Item>
-              <Item>elevation4</Item>
+              <Item>
+                <div className="sec02-box sec02-boxImg1">
+                  <h5 className="sec02-white">등산로</h5>
+                  <p className="sec02-padTop sec02-white">
+                    트레킹하기 좋은 등산로
+                  </p>
+                </div>
+              </Item>
+              <Item>
+                <div className="sec02-box sec02-boxImg2">
+                  <h5 className="sec02-white">공원</h5>
+                  <p className="sec02-padTop sec02-white">
+                    몸도 마음도 쉬어가는 공원
+                  </p>
+                </div>
+              </Item>
+              <Item>
+                <div className="sec02-box sec02-boxImg3">
+                  <h5 className="sec02-white">둘레길</h5>
+                  <p className="sec02-padTop sec02-white">
+                    가볍게 걸을 수 있는 둘레길
+                  </p>
+                </div>
+              </Item>
+              <Item>
+                <div className="sec02-box sec02-boxImg4">
+                  <h5 className="sec02-white">자전거길</h5>
+                  <p className="sec02-padTop sec02-white">
+                    자전거 타기 좋은 코스
+                  </p>
+                </div>
+              </Item>
             </Box>
           </Grid>
         </Grid>
