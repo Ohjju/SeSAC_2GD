@@ -1,0 +1,13 @@
+@import "./style.scss";
+
+.modal-supplies {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6rem;
+}
+
+.modal-supply {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
