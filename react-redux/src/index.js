@@ -30,9 +30,9 @@ function reducer(state = 1, action) {
   }
 }
 
-let store = configureStore({ reducer: reducer });
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+let store = configureStore({ reducer: reducer });
 root.render(
   <Provider store={store}>
     <App />
