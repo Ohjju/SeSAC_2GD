@@ -1,12 +1,15 @@
 @import "./style.scss";
+
 .sec-container {
-  // width: 100%;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
   // 지금 그냥 구분하려고 padding 해준 것
   padding-top: 80px;
+  background-color: beige;
 }
 
 .sec-box {

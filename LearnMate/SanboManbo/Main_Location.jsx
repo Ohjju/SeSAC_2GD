@@ -33,7 +33,6 @@ export default function MainLocation() {
           <Grid item xs={12}>
             <Box
               sx={{
-                bgcolor: "background.default",
                 gap: 2,
                 display: "flex",
                 paddingTop: "3rem",
@@ -76,18 +75,7 @@ export default function MainLocation() {
           </Grid>
         </Grid>
 
-        <button
-          class="btn-large"
-          style={{
-            backgroundColor: "green",
-            color: "white",
-            lineHeight: "48px",
-            textAlign: "center",
-            width: "100%",
-            borderRadius: "35px",
-            border: "none",
-          }}
-        >
+        <button class="btn-large sec02-button">
           내 위치에서 가까운 트레킹 장소 보기
         </button>
       </div>

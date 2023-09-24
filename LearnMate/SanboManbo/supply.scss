@@ -1,5 +1,6 @@
 @import "./style.scss";
 
+//supply-icon.jsx
 .modal-supplies {
   display: flex;
   justify-content: space-around;
@@ -10,4 +11,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+//supply,jsx
+.modal-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  position: fixed;
+  top: 550px;
+  right: 30px;
+}
+
+.modal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgb(248, 248, 248);
+  border: 2px solid #000;
+  box-shadow: 24;
+  padding: 40px;
+  padding-top: 70px;
+}
+
+.modal-box {
+  overflow-y: auto;
+  height: 90%;
 }

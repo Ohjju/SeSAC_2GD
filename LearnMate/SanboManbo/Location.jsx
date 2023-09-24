@@ -43,7 +43,7 @@ export default function Location() {
         >
           {/* xs 조절 (12가 끝) */}
           <nav className="sec-gotoMain">⬅</nav>
-          <Grid item xs={3}>
+          <Grid item xs={0.1}>
             <Box
               sx={{
                 bgcolor: "background.default",
