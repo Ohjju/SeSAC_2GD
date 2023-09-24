@@ -1,11 +1,12 @@
 import * as React from "react";
 import "../styles/style.scss";
 import "../styles/__root.scss";
-import "../styles/main_location.scss";
+import "../styles/mainLocation.scss";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -74,10 +75,11 @@ export default function MainLocation() {
             </Box>
           </Grid>
         </Grid>
-
-        <button class="btn-large sec02-button">
-          내 위치에서 가까운 트레킹 장소 보기
-        </button>
+        <Link class="sec02-button btn-large" to="/myLocation">
+          <div style={{ color: "white" }}>
+            내 위치에서 가까운 트레킹 장소 보기
+          </div>
+        </Link>
       </div>
     </>
   );

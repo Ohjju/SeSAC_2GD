@@ -7,12 +7,18 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
-  // 지금 그냥 구분하려고 padding 해준 것
-  padding-top: 80px;
-  background-color: beige;
+}
+.sec-box {
+  width: 250px;
+  max-height: 150;
+  height: 20vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.sec-box {
+.sec-boxContent {
   padding: 1rem;
   padding-left: 3rem;
   padding-bottom: 3rem;
@@ -32,12 +38,14 @@
 }
 
 .sec-gotoMain {
-  background-color: green;
-  color: white;
+  position: absolute;
+  z-index: 10;
+  background-color: var(--main-green-50);
   width: 50px;
   height: 50px;
   font-size: 3.5rem;
   line-height: 50px;
   text-align: center;
   border-radius: 0 10px 10px 0;
+  top: 4rem;
 }
