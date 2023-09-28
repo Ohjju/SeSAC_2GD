@@ -1,0 +1,38 @@
+.todoBox {
+  width: 100%;
+  height: 17rem;
+  margin-bottom: 1.6rem;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: white;
+
+  .todoContent {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.todoTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.todoDate {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+
+.todoContent {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+}
