@@ -12,6 +12,10 @@
   background-color: #f8f8f8;
 }
 
+.shadow {
+  box-shadow: 0px 0px 2px 2px #e7e7e745;
+}
+
 .left {
   width: 23.2rem;
   height: 100%;
@@ -62,7 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.3rem;
+    padding: 0 2rem;
     box-sizing: border-box;
 
     .state {
@@ -70,7 +74,7 @@
       height: 2.7rem;
       border-radius: 50%;
       background-color: var(--status-green);
-      margin: 0 2rem;
+      margin-right: 2rem;
       box-sizing: border-box;
     }
   }
@@ -81,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.3rem;
+    padding: 0 2rem;
     box-sizing: border-box;
 
     .state {
@@ -89,7 +93,7 @@
       height: 2.7rem;
       border-radius: 50%;
       background-color: var(--status-yellow);
-      margin: 0 2rem;
+      margin-right: 2rem;
       box-sizing: border-box;
     }
   }
@@ -100,7 +104,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.3rem;
+    padding: 0 2rem;
     box-sizing: border-box;
 
     .state {
@@ -108,7 +112,7 @@
       height: 2.7rem;
       border-radius: 50%;
       background-color: var(--status-gray);
-      margin: 0 2rem;
+      margin-right: 2rem;
       box-sizing: border-box;
     }
   }
@@ -124,22 +128,29 @@
 .count {
   width: 2.7rem;
   height: 2.7rem;
-  margin: 0 1rem;
+  margin-left: 1rem;
   border-radius: 5px;
   background-color: var(--main-color-30);
   font-size: 1.8rem;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 2.7rem;
   text-align: center;
 }
 
+//todo 추가
+.addTodo:hover {
+  cursor: pointer;
+}
+
 .todoGroupBox {
-  width: 100%;
+  width: calc(100% + 15px);
+  // 스크롤바 넓이 고려해 더해줌
   height: 535px;
   display: flex;
   box-sizing: border-box;
   // justify-content: space-between;
+  overflow-y: auto;
 
   .todo {
     width: 37.8rem;
@@ -157,4 +168,52 @@
     width: 37.8rem;
     box-sizing: border-box;
   }
+}
+
+// todoGroupBox 스크롤바
+.todoGroupBox::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  box-sizing: border-box;
+}
+
+.todoGroupBox::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--main-color-30); /* 스크롤바의 색상 */
+  border-radius: 15px;
+}
+
+.todoGroupBox::-webkit-scrollbar-track {
+  background: rgba(132, 206, 255, 0.175); /*스크롤바 뒷 배경 색상*/
+  border-radius: 15px;
+}
+
+//input창
+.inputStyle {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  width: 37.8rem;
+  height: 5.3rem;
+  border-radius: 15px;
+  margin-bottom: 1.6rem;
+}
+
+.inputIcon {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #dddddd;
+}
+
+.todoInput {
+  width: 32rem;
+  height: 5.3rem;
+  border: 0;
+  outline: none;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  margin-left: 2rem;
+}
+
+input::placeholder {
+  color: #c9c9c9;
 }

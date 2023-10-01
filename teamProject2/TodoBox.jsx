@@ -6,11 +6,12 @@ export default function TodoBox(props) {
   const { title, date, content, statecolor, boxcolor } = props;
   return (
     <>
-      <div className="todoBox">
-        <div
-          className="todoColor"
-          style={{ backgroundColor: `var(${boxcolor})` }}
-        ></div>
+      <div
+        className="todoBox shadow "
+        style={{
+          background: `linear-gradient(90deg, var(${boxcolor}) 12px, #ffffff 12px)`,
+        }}
+      >
         <div className="todoContent">
           <div
             style={{
@@ -21,7 +22,7 @@ export default function TodoBox(props) {
             }}
           >
             <div
-              className="state"
+              className="todoState"
               style={{ backgroundColor: `var(${statecolor})` }}
             ></div>
             <FontAwesomeIcon
