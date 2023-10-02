@@ -3,8 +3,7 @@ import "../styles/todo.scss";
 import TodoBox from "../components/TodoBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faFile } from "@fortawesome/free-solid-svg-icons";
-import React, { useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useRef } from "react";
 
 // todo 목록
 export default function Todo() {
@@ -48,7 +47,8 @@ export default function Todo() {
         </div>
       ),
     };
-    setInputTodo([...inputTodo, newTodo]); // 기존 값에 새로운 인풋객체를 추가
+    // setInputTodo([...inputTodo, newTodo]); // 기존 값에 새로운 인풋객체를 추가
+    setInputTodo([newTodo]); // 새로운 인풋객체를 추가
     nextID.current += 1; // id값은 1씩 늘려줌
   }
 
@@ -126,7 +126,7 @@ export default function Todo() {
                   );
                 })}
 
-                {/* <TodoBox
+                <TodoBox
                   title="디자인 틀 완성하기"
                   date="09.28 ~ 10.20"
                   content="내용내요내용내용내요내요"
@@ -147,13 +147,14 @@ export default function Todo() {
                   boxcolor="--select-green"
                   statecolor="--status-green"
                 />
+
                 <TodoBox
                   title="코드 작성하기"
                   date="09.28 ~ 11.30"
                   content="content"
                   boxcolor="--select-brown"
                   statecolor="--status-green"
-                /> */}
+                />
               </div>
               <div className="doing">
                 <TodoBox

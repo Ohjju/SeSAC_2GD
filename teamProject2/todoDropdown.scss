@@ -1,0 +1,12 @@
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: #fefefe;
+  border-radius: 15px;
+  position: absolute;
+  //스크롤할 때 같이 움직이도록 수정!
+  transform: translate(170px, 40px);
+}
+.shadow {
+  box-shadow: 0px 0px 2px 2px #e7e7e745;
+}
