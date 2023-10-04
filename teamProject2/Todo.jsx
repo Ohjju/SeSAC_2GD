@@ -2,13 +2,10 @@ import "../styles/global.scss";
 import "../styles/todo.scss";
 import TodoBox from "../components/TodoBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faFile } from "@fortawesome/free-solid-svg-icons";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
 import TodoDropdown from "../components/TodoDropdown";
 import TodoSide from "../components/TodoSide";
-import { todo } from "../store/modules/todo";
-import { title } from "process";
 
 // todo 목록
 export default function Todo() {
@@ -16,7 +13,7 @@ export default function Todo() {
   const DoingID = useRef < number > 1;
   const DoneID = useRef < number > 1;
 
-  // todo 추가 변수
+  // todo 목록 => inputTodo
   const [inputTodo, setInputTodo] = useState([
     {
       id: 0,
@@ -25,7 +22,7 @@ export default function Todo() {
     },
   ]);
 
-  // doing 추가 변수
+  // doing 목록
   const [inputDoing, setInputDoing] = useState([
     {
       id: 0,
@@ -33,7 +30,7 @@ export default function Todo() {
     },
   ]);
 
-  // done 추가 변수
+  // done 목록
   const [inputDone, setInputDone] = useState([
     {
       id: 0,
@@ -41,8 +38,8 @@ export default function Todo() {
     },
   ]);
 
-  // react에서 useref 사용?
-  const input = useRef < HTMLInputElement > null;
+  // react에서 useref 사용
+  // const input = useRef<HTMLInputElement>(null);
 
   // dropdown 관련변수
   const [view, setView] = useState(false);
@@ -52,49 +49,30 @@ export default function Todo() {
     // const { title, date, content, boxcolor } = props;
     const newTodo = {
       id: TodoID.current, // id 값은 변수로 넣어줌
-      To: <TodoBox statecolor="--status-green" />,
+      To: <TodoBox statecolor="--status-green" background="#ffffff" />,
     };
-    // setInputTodo([...inputTodo, newTodo]); // 기존 값에 새로운 인풋객체를 추가
-    setInputTodo([newTodo, ...inputTodo]); // 새로운 인풋객체를 추가
+    setInputTodo([newTodo, ...inputTodo]); // 새로운 인풋객체 추가
     TodoID.current += 1; // id값은 1씩 늘려줌
   }
 
   // doing 추가
   function addDoing() {
     const newDoing = {
-      id: DoingID.current, // id 값은 변수로 넣어줌
-      To: (
-        <TodoBox
-          title=""
-          date=""
-          content=""
-          boxcolor=""
-          statecolor="--status-yellow"
-        />
-      ),
+      id: DoingID.current,
+      To: <TodoBox statecolor="--status-yellow" background="#ffffff" />,
     };
-    // setInputTodo([...inputTodo, newTodo]); // 기존 값에 새로운 인풋객체를 추가
-    setInputDoing([newDoing, ...inputDoing]); // 새로운 인풋객체를 추가
-    DoingID.current += 1; // id값은 1씩 늘려줌
+    setInputDoing([newDoing, ...inputDoing]);
+    DoingID.current += 1;
   }
 
   // Done 추가
   function addDone() {
     const newDone = {
-      id: DoneID.current, // id 값은 변수로 넣어줌
-      To: (
-        <TodoBox
-          title=""
-          date=""
-          content=""
-          boxcolor=""
-          statecolor="--status-gray"
-        />
-      ),
+      id: DoneID.current,
+      To: <TodoBox statecolor="--status-gray" background="#f5f5f5" />,
     };
-    // setInputTodo([...inputTodo, newTodo]); // 기존 값에 새로운 인풋객체를 추가
-    setInputDone([newDone, ...inputDone]); // 새로운 인풋객체를 추가
-    DoneID.current += 1; // id값은 1씩 늘려줌
+    setInputDone([newDone, ...inputDone]);
+    DoneID.current += 1;
   }
 
   // todoBox 색
@@ -104,9 +82,6 @@ export default function Todo() {
     "--select-green",
     "--select-brown",
   ];
-
-  // 할일 목록
-  const todoList = [];
 
   return (
     <>
@@ -125,7 +100,8 @@ export default function Todo() {
                 <div style={{ display: "flex" }}>
                   <div className="state"></div>
                   <div className="title">해야할 일</div>
-                  <div className="count">5</div>
+                  {/* 할일 개수 */}
+                  <div className="count">{inputTodo.length - 1}</div>
                 </div>
                 <FontAwesomeIcon
                   className="addTodo"
@@ -139,7 +115,7 @@ export default function Todo() {
                 <div style={{ display: "flex" }}>
                   <div className="state"></div>
                   <div className="title">진행 중</div>
-                  <div className="count">5</div>
+                  <div className="count">{inputDoing.length - 1}</div>
                 </div>
                 <FontAwesomeIcon
                   className="addTodo"
@@ -164,9 +140,8 @@ export default function Todo() {
             <div className="todoGroupBox">
               <div className="todo">
                 {view && <TodoDropdown />}
+
                 {inputTodo.map((e, index) => {
-                  // 할일 목록에 추가
-                  todoList.push(e.To);
                   return <div key={index}>{e.To}</div>;
                 })}
               </div>

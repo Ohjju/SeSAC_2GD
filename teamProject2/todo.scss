@@ -148,23 +148,22 @@
   height: 535px;
   display: flex;
   box-sizing: border-box;
-  // justify-content: space-between;
   overflow-y: auto;
 
   .todo {
-    width: 37.8rem;
-    margin-right: 1.6rem;
+    width: 31rem;
+    margin-right: 2rem;
     box-sizing: border-box;
   }
 
   .doing {
-    width: 37.8rem;
-    margin-right: 1.6rem;
+    width: 31rem;
+    margin-right: 2rem;
     box-sizing: border-box;
   }
 
   .done {
-    width: 37.8rem;
+    width: 31rem;
     box-sizing: border-box;
   }
 }
