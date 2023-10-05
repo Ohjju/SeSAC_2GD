@@ -2,8 +2,8 @@ import "../styles/global.scss";
 import "../styles/todo.scss";
 import TodoBox from "../components/TodoBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
+import { faPlus, faBars, faBell } from "@fortawesome/free-solid-svg-icons";
+import { useState, useRef, useEffect } from "react";
 import TodoDropdown from "../components/TodoDropdown";
 import TodoSide from "../components/TodoSide";
 
@@ -38,18 +38,36 @@ export default function Todo() {
     },
   ]);
 
-  // react에서 useref 사용
-  // const input = useRef<HTMLInputElement>(null);
-
   // dropdown 관련변수
   const [view, setView] = useState(false);
 
+  // const randomValue = colors[Math.floor(Math.random() * colors.length)];
+  // 위처럼 작성하면 색이 자꾸 바뀜 -> 한번 결정된 색은 새로고침 안되도록 수정!
+  // 랜덤 색 선택
+  const colors = [
+    "--select-green",
+    " --select-pink",
+    "--select-gray",
+    "--select-brown",
+  ];
+
+  // useEffect((): any => {
+  //  const randomValue = colors[Math.floor(Math.random() * colors.length)];
+  //  const randomColor = document.querySelector(".addTodo") as HTMLInputElement;
+  //   randomColor.style.background = `linear-gradient(90deg, var(${randomValue}) 12px, #ffffff 12px)`;
+  // }, []);
+
   // todo 추가
   function addTodo() {
-    // const { title, date, content, boxcolor } = props;
     const newTodo = {
       id: TodoID.current, // id 값은 변수로 넣어줌
-      To: <TodoBox statecolor="--status-green" background="#ffffff" />,
+      To: (
+        <TodoBox
+          statecolor="--status-green"
+          background="#ffffff"
+          // randomValue=""
+        />
+      ),
     };
     setInputTodo([newTodo, ...inputTodo]); // 새로운 인풋객체 추가
     TodoID.current += 1; // id값은 1씩 늘려줌
@@ -75,17 +93,16 @@ export default function Todo() {
     DoneID.current += 1;
   }
 
-  // todoBox 색
-  const colors = [
-    "--select-gray",
-    " --select-pink",
-    "--select-green",
-    "--select-brown",
-  ];
-
   return (
     <>
-      <header className="header"></header>
+      <header className="header">
+        <FontAwesomeIcon className="hamburger" icon={faBars} />
+        <div className="logo"></div>
+        <div className="rightIcon">
+          <FontAwesomeIcon className="alarm" icon={faBell} />
+          <div className="me"></div>
+        </div>
+      </header>
       <div className="todoContainer">
         <div className="left">
           <div className="miniCalendar shadow"></div>

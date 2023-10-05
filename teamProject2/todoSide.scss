@@ -1,0 +1,76 @@
+.menu1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+
+  .menuAddTodo {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+  }
+}
+
+.menu2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+
+  .menuTodo {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+  }
+
+  .todoIcon {
+    transform: rotate(0);
+  }
+  .todoIcon.open {
+    transform: rotate(90deg);
+  }
+}
+
+.menu3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+
+  .menuDoing {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+  }
+
+  .doingIcon {
+    transform: rotate(0);
+  }
+  .doingIcon.open {
+    transform: rotate(90deg);
+  }
+}
+
+.menu4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+
+  .menuImportant {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+  }
+
+  .importIcon {
+    transform: rotate(0);
+  }
+  .importIcon.open {
+    transform: rotate(90deg);
+  }
+}

@@ -3,7 +3,7 @@ import "../styles/todoDropdown.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import TodoDropdown from "./TodoDropdown";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -24,6 +24,18 @@ export default function TodoBox(props) {
     "--select-gray",
     "--select-brown",
   ];
+
+  // const randomValue = colors[Math.floor(Math.random() * colors.length)];
+  // 위처럼 작성하면 색이 자꾸 바뀜 -> 한번 결정된 색은 새로고침 안되도록 수정
+  // useEffect((): any => {
+  // const randomValue = colors[Math.floor(Math.random() * colors.length)];
+  // 첫번째로 생기는 todo에만 적용되고 있음 -> 수정!
+  // const randomColor = document.querySelector(".todoBox") as HTMLInputElement;
+  // randomColor.style.background = `linear-gradient(90deg, var(${randomValue}) 12px, ${background} 12px)`;
+  // 위에 했던 거 unmount해야 다음 렌더링 때 새로운 todo에 style이 적용됨
+  // return () => {};
+  // }, [addTodo]);
+
   const randomValue = colors[Math.floor(Math.random() * colors.length)];
 
   // 날짜 선택
@@ -116,11 +128,12 @@ export default function TodoBox(props) {
                 if (e.key === "Enter") {
                   // 엔터하면 input 포커스 해제
                   // (document.activeElement as HTMLElement).blur();
+
                   //입력받은 memo => inputMemo
                   // const inputMemo = (
                   // document.querySelector(".todoMemo") as HTMLInputElement
                   // ).value;
-                  // console.log(inputMemo);
+                  console.log(inputMemo);
                 }
               }}
             ></textarea>
