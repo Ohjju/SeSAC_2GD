@@ -21,21 +21,6 @@ export default function TodoSide() {
   return (
     <>
       <div className="menu1">
-        <div className="menuAddTodo">할일 추가하기</div>
-        <FontAwesomeIcon
-          icon={faPlus}
-          style={{ color: "d9d9d9", fontSize: "1.8rem" }}
-        />
-      </div>
-      <hr
-        style={{
-          height: "0.1rem",
-          backgroundColor: ` var(--text-black-20)`,
-          border: "0",
-          margin: "0",
-        }}
-      />
-      <div className="menu2">
         <div className="menuTodo">해야할 일</div>
         <FontAwesomeIcon
           className={`todoIcon ${todoRotate ? "open" : ""}`}
@@ -60,7 +45,7 @@ export default function TodoSide() {
           margin: "0",
         }}
       />
-      <div className="menu3">
+      <div className="menu2">
         <div className="menuDoing">진행 중</div>
         <FontAwesomeIcon
           className={`doingIcon ${doingRotate ? "open" : ""}`}
@@ -83,7 +68,7 @@ export default function TodoSide() {
           margin: "0",
         }}
       />
-      <div className="menu4">
+      <div className="menu3">
         <div className="menuImportant">중요</div>
         <FontAwesomeIcon
           className={`importIcon ${importRotate ? "open" : ""}`}

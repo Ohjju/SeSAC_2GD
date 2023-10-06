@@ -5,8 +5,13 @@ import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef, useEffect } from "react";
 import TodoDropdown from "./TodoDropdown";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
+import DatePicker from "./DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
+// // color = 입력받은 boxColor
+// import color from "./TodoDropdown";
+// // chageColor = 입력받은 color로 현재 boxColor를 바꿔주는 함수
+// import { ChangeColor } from "./ChangeColor";
 
 export default function TodoBox(props) {
   const { statecolor, background } = props;
@@ -32,27 +37,26 @@ export default function TodoBox(props) {
   // 첫번째로 생기는 todo에만 적용되고 있음 -> 수정!
   // const randomColor = document.querySelector(".todoBox") as HTMLInputElement;
   // randomColor.style.background = `linear-gradient(90deg, var(${randomValue}) 12px, ${background} 12px)`;
-  // 위에 했던 거 unmount해야 다음 렌더링 때 새로운 todo에 style이 적용됨
-  // return () => {};
   // }, [addTodo]);
-
-  const randomValue = colors[Math.floor(Math.random() * colors.length)];
 
   // 날짜 선택
   const [startDate, setStartDate] = (useState < Date) | (null > new Date());
   const [endDate, setEndDate] = (useState < Date) | (null > new Date());
 
+  // 색상 랜덤 값
+  const randomValue = colors[Math.floor(Math.random() * colors.length)];
+
   return (
     <>
+      {/* dropdown 메뉴 */}
+      {view && <TodoDropdown />}
+
       <div
         className="todoBox shadow"
         style={{
           background: `linear-gradient(90deg, var(${randomValue}) 12px, ${background} 12px)`,
         }}
       >
-        {/* dropdown 메뉴 */}
-        {view && <TodoDropdown />}
-
         <div className="todoContent">
           <div
             style={{
@@ -98,6 +102,12 @@ export default function TodoBox(props) {
 
           <div className="todoDate">
             <DatePicker
+              startDate={startDate}
+              setStartDate={setStartDate}
+              endDate={endDate}
+              setEndDate={setEndDate}
+            />
+            {/* <DatePicker
               className="startDate"
               dateFormat="yy.MM.dd" // 날짜 형태
               shouldCloseOnSelect // 날짜를 선택하면 datepicker가 자동으로 닫힘
@@ -115,7 +125,7 @@ export default function TodoBox(props) {
               maxDate={new Date("+365d")}
               selected={endDate}
               onChange={(date) => setEndDate(date)}
-            />
+            /> */}
           </div>
 
           <div className="todoMemo">

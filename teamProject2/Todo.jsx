@@ -6,6 +6,8 @@ import { faPlus, faBars, faBell } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef, useEffect } from "react";
 import TodoDropdown from "../components/TodoDropdown";
 import TodoSide from "../components/TodoSide";
+// chageColor = 입력받은 color로 현재 boxColor를 바꿔주는 함수
+import { ChangeColor } from "../components/ChangeColor";
 
 // todo 목록
 export default function Todo() {
@@ -52,22 +54,16 @@ export default function Todo() {
   ];
 
   // useEffect((): any => {
-  //  const randomValue = colors[Math.floor(Math.random() * colors.length)];
-  //  const randomColor = document.querySelector(".addTodo") as HTMLInputElement;
-  //   randomColor.style.background = `linear-gradient(90deg, var(${randomValue}) 12px, #ffffff 12px)`;
+  //   const randomValue = colors[Math.floor(Math.random() * colors.length)];
+  //   // const randomColor = document.querySelector(".todoBox") as HTMLInputElement;
+  //   // randomColor.style.background = `linear-gradient(90deg, var(${randomValue}) 12px, #ffffff 12px)`;
   // }, []);
 
   // todo 추가
   function addTodo() {
     const newTodo = {
       id: TodoID.current, // id 값은 변수로 넣어줌
-      To: (
-        <TodoBox
-          statecolor="--status-green"
-          background="#ffffff"
-          // randomValue=""
-        />
-      ),
+      To: <TodoBox statecolor="--status-green" background="#ffffff" />,
     };
     setInputTodo([newTodo, ...inputTodo]); // 새로운 인풋객체 추가
     TodoID.current += 1; // id값은 1씩 늘려줌
@@ -124,7 +120,9 @@ export default function Todo() {
                   className="addTodo"
                   icon={faPlus}
                   style={{ color: "d9d9d9", fontSize: "2.5rem" }}
-                  onClick={addTodo}
+                  onClick={() => {
+                    addTodo();
+                  }}
                 />
               </div>
 
