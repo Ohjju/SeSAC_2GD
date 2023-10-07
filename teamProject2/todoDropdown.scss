@@ -5,9 +5,7 @@
   border: 2px solid var(--main-color-20);
   border-radius: 10px;
   position: absolute;
-
-  //스크롤할 때 같이 움직이도록 수정!
-  transform: translate(30rem, 4rem);
+  transform: translate(13rem, 4.4rem);
   z-index: 1;
   padding: 0.8rem 0;
 }

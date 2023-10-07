@@ -1,4 +1,5 @@
 import DatePicker from "react-datepicker";
+import { useState, useRef } from "react";
 import { Dispatch, SetStateAction } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,11 +16,11 @@ import "../styles/dataPicker.scss";
 // }
 
 // const CustomDatePicker = (props: IProps) => {
-const CustomDatePicker = (props) => {
-  const _ = require("lodash");
+const CustomDatePicker = () => {
+  // const [startDate, setStartDate] = useState();
+  // const [endDate, setEndDate] = useState();
 
-  // 연도 선택 select box에 보여질 데이터 : range(시작 연도, 끝 연도, 연도 간격)
-  //   const years = _.range(2022, new Date().getFullYear() + 5, 1);
+  const _ = require("lodash");
 
   // 월 선택 select box에 보여질 데이터
   const months = [
@@ -42,7 +43,6 @@ const CustomDatePicker = (props) => {
       <DatePicker
         renderCustomHeader={({
           date,
-          // changeYear,
           changeMonth,
           decreaseMonth,
           increaseMonth,
@@ -55,23 +55,12 @@ const CustomDatePicker = (props) => {
               <FontAwesomeIcon
                 icon={faChevronLeft}
                 style={{ fontSize: "1rem" }}
+                onClick={() => {
+                  console.log(props.setStartDate);
+                  console.log(props.startDate);
+                }}
               />
             </button>
-
-            {/* <div className="custom-react-datepicker__select-item">
-              연도 선택 select box 
-              <select
-                value={date.getFullYear()}
-                onChange={({ target: { value } }) => changeYear(Number(value))}
-              >
-                {years.map((option: any) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-              <span>년</span> 
-            </div>*/}
 
             <div className="custom-react-datepicker__select-item">
               {/* 월 선택 select box */}
@@ -119,7 +108,6 @@ const CustomDatePicker = (props) => {
       />
 
       <span className="custom-react-datepicker__split-span">~</span>
-
       {/* 종료 날짜를 지정하는 데이트 피커 */}
       <DatePicker
         renderCustomHeader={({
@@ -174,6 +162,7 @@ const CustomDatePicker = (props) => {
             </button>
           </div>
         )}
+        // value=""
         dateFormat="yy.MM.dd"
         selected={new Date(props.endDate)}
         onChange={(date) => props.setEndDate(date)}

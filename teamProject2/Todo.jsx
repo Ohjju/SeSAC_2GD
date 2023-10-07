@@ -155,7 +155,6 @@ export default function Todo() {
             <div className="todoGroupBox">
               <div className="todo">
                 {view && <TodoDropdown />}
-
                 {inputTodo.map((e, index) => {
                   return <div key={index}>{e.To}</div>;
                 })}

@@ -181,14 +181,17 @@
 }
 
 .todoGroupBox {
+  position: relative;
   width: calc(100% + 15px);
   // 스크롤바 넓이 고려해 더해줌
   height: 535px;
   display: flex;
   box-sizing: border-box;
   overflow-y: auto;
+  overflow-x: hidden;
 
   .todo {
+    position: relative;
     width: 31rem;
     margin-right: 2rem;
     box-sizing: border-box;

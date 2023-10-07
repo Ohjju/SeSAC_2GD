@@ -111,14 +111,14 @@
 }
 
 .react-datepicker__day {
-  width: 2rem !important;
+  width: 2.5rem !important;
   height: 100% !important;
   font-size: 1.2rem !important;
   font-weight: 400 !important;
   line-height: 2rem !important;
   color: var(--text-black-60);
   font-family: "Pretendard Variable", sans-serif;
-  margin: 0 0.3rem !important;
+  margin: 0 !important;
   padding: 0 !important;
 
   &:first-child {
@@ -129,26 +129,28 @@
     color: blue;
   }
 }
+
+// 현재 선택한 날짜
 .react-datepicker__day--selected {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: white !important;
   width: 19px;
   height: 14px;
-  background-color: white !important;
-  border-radius: 0.7rem !important;
   line-height: 14px;
 }
 
-.react-datepicker__day--in-selecting-range,
-.react-datepicker__day--in-range {
-  background-color: var(--main-color-20) !important;
-  border-radius: 0.5rem !important;
-}
 .react-datepicker__day--keyboard-selected {
-  background-color: var(--main-color-30) !important;
-  color: var(--text-black-60) !important;
+  background-color: white !important;
+  color: #2b2b2b !important;
+}
+
+.react-datepicker__day--in-range,
+.react-datepicker__day--in-selecting-range {
+  background-color: var(--main-color-20) !important;
+  border-radius: 0 !important;
 }
 
 .react-datepicker__day--today {
@@ -158,9 +160,22 @@
 }
 
 .react-datepicker__day--range-start {
-  background-color: var(--main-color-20) !important;
-  border-radius: 7px !important;
-  color: white !important;
+  background-color: var(--main-color-30) !important;
+  // 그라데이션 줘서 2가지 색 넣기
+  background: radial-gradient(
+    var(--main-color-30) 70%,
+    var(--main-color-20) 40%
+  );
+  border-radius: 1.5rem 0 0 1.5rem !important;
+}
+
+.react-datepicker__day--range-end {
+  background-color: var(--main-color-30) !important;
+  background: radial-gradient(
+    var(--main-color-30) 70%,
+    var(--main-color-20) 40%
+  );
+  border-radius: 0 1.5rem 1.5rem 0 !important;
 }
 
 .custom-react-datepicker__split-span {
