@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck, faStar } from "@fortawesome/free-solid-svg-icons";
 import "../styles/menuAddTodo.scss";
+import { useState, useRef } from "react";
 
 export default function MenuAddTodo() {
+  const [viewTodo, setViewTodo] = (useState < boolean) | (null > true);
   return (
     <div className="sideContainer">
       <div className="sideTodo">
@@ -12,8 +14,25 @@ export default function MenuAddTodo() {
           </div>
           <div className="todoName">디자인 틀 완성하기</div>
         </div>
-        <div className="todoStar">
-          <FontAwesomeIcon icon={faStar} />
+        <div id="todoStar0">
+          <FontAwesomeIcon
+            icon={faStar}
+            onClick={() => {
+              setViewTodo(!viewTodo);
+              {
+                viewTodo &&
+                  document
+                    .getElementById("todoStar0")
+                    ?.classList.add("important");
+              }
+              {
+                !viewTodo &&
+                  document
+                    .getElementById("todoStar0")
+                    ?.classList.remove("important");
+              }
+            }}
+          />
         </div>
       </div>
 
@@ -24,8 +43,25 @@ export default function MenuAddTodo() {
           </div>
           <div className="todoName">ppt 만들기</div>
         </div>
-        <div className="todoStar important">
-          <FontAwesomeIcon icon={faStar} />
+        <div id="todoStar1">
+          <FontAwesomeIcon
+            icon={faStar}
+            onClick={() => {
+              setViewTodo(!viewTodo);
+              {
+                viewTodo &&
+                  document
+                    .getElementById("todoStar1")
+                    ?.classList.add("important");
+              }
+              {
+                !viewTodo &&
+                  document
+                    .getElementById("todoStar1")
+                    ?.classList.remove("important");
+              }
+            }}
+          />
         </div>
       </div>
     </div>

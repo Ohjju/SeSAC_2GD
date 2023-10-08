@@ -19,13 +19,14 @@
     font-size: 1.4rem;
     line-height: 2.1rem;
   }
-  .todoStar {
+  #todoStar0,
+  #todoStar1 {
     font-size: 1.2rem;
     line-height: 2.1rem;
     color: var(--text-black-20);
   }
 
   .important {
-    color: #ffc773;
+    color: #ffc773 !important;
   }
 }

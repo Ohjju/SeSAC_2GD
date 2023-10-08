@@ -11,37 +11,37 @@ import { ChangeColor } from "../components/ChangeColor";
 
 // todo 목록
 export default function Todo() {
-  const TodoID = useRef < number > 1;
+  // 초기값 0으로 넣어주었으므로 1부터 시작
+  const TodoID = useRef < number > 0;
   const DoingID = useRef < number > 1;
   const DoneID = useRef < number > 1;
 
-  // todo 목록 => inputTodo
-  const [inputTodo, setInputTodo] = useState([
-    {
-      id: 0,
-      To: <></>,
-      // 나중에 고치기(불필요한 태그 생성됨)
-    },
-  ]);
+  const [inputTodo, setInputTodo] = useState < any > [];
 
   // doing 목록
-  const [inputDoing, setInputDoing] = useState([
-    {
-      id: 0,
-      To: <></>,
-    },
-  ]);
+  const [inputDoing, setInputDoing] =
+    useState <
+    any >
+    [
+      {
+        id: 0,
+        To: <></>,
+      },
+    ];
 
   // done 목록
-  const [inputDone, setInputDone] = useState([
-    {
-      id: 0,
-      To: <></>,
-    },
-  ]);
+  const [inputDone, setInputDone] =
+    useState <
+    any >
+    [
+      {
+        id: 0,
+        To: <></>,
+      },
+    ];
 
   // dropdown 관련변수
-  const [view, setView] = useState(false);
+  const [view, setView] = useState < any > false;
 
   // const randomValue = colors[Math.floor(Math.random() * colors.length)];
   // 위처럼 작성하면 색이 자꾸 바뀜 -> 한번 결정된 색은 새로고침 안되도록 수정!
@@ -60,7 +60,7 @@ export default function Todo() {
   // }, []);
 
   // todo 추가
-  function addTodo() {
+  function useAddTodo() {
     const newTodo = {
       id: TodoID.current, // id 값은 변수로 넣어줌
       To: <TodoBox statecolor="--status-green" background="#ffffff" />,
@@ -68,6 +68,18 @@ export default function Todo() {
     setInputTodo([newTodo, ...inputTodo]); // 새로운 인풋객체 추가
     TodoID.current += 1; // id값은 1씩 늘려줌
   }
+
+  useEffect(() => {
+    console.log(inputTodo);
+    // console.log(inputTest.current);
+    // 여기 있으니까 잘 출력됨(순서 이대로)
+    // const newTodo = {
+    //   id: TodoID.current, // id 값은 변수로 넣어줌
+    //   To: <TodoBox statecolor="--status-green" background="#ffffff" />,
+    // };
+    // inputTest.current = [newTodo, ...inputTest.current];
+    // TodoID.current += 1;
+  });
 
   // doing 추가
   function addDoing() {
@@ -88,6 +100,32 @@ export default function Todo() {
     setInputDone([newDone, ...inputDone]);
     DoneID.current += 1;
   }
+
+  // 드래그 이벤트 시작
+  // const dragItem = useRef<any>(); // 드래그할 아이템의 인덱스
+  // const dragOverItem = useRef<any>(); // 드랍할 위치의 아이템의 인덱스
+
+  // 드래그 시작될 때 실행
+  // const dragStart = (e: any, position: any) => {
+  //   dragItem.current = position;
+  // };
+  // // 드래그중인 대상이 위로 포개졌을 때
+  // const dragEnter = (e: any, position: any) => {
+  //   dragOverItem.current = position;
+  // };
+
+  // // 드랍 (커서 땠을 때)
+  // const drop = (e: any) => {
+  //   const newList = [...inputTodo];
+  //   const dragItemValue = newList[dragItem.current];
+  //   newList.splice(dragItem.current, 1);
+  //   // 인덱스 = dragItem.current인 지점에서 요소 하나 삭제
+  //   newList.splice(dragOverItem.current, 0, dragItemValue);
+  //   // 인덱스 = dragItem.current인 지점에서 기존 요소 유지한 채 dragItemValue 추가
+  //   dragItem.current = null;
+  //   dragOverItem.current = null;
+  //   setInputTodo(newList);
+  // };
 
   return (
     <>
@@ -114,15 +152,13 @@ export default function Todo() {
                   <div className="state"></div>
                   <div className="title">해야할 일</div>
                   {/* 할일 개수 */}
-                  <div className="count">{inputTodo.length - 1}</div>
+                  <div className="count">{inputTodo.length}</div>
                 </div>
                 <FontAwesomeIcon
                   className="addTodo"
                   icon={faPlus}
                   style={{ color: "d9d9d9", fontSize: "2.5rem" }}
-                  onClick={() => {
-                    addTodo();
-                  }}
+                  onClick={useAddTodo}
                 />
               </div>
 
@@ -155,23 +191,42 @@ export default function Todo() {
             <div className="todoGroupBox">
               <div className="todo">
                 {view && <TodoDropdown />}
-                {inputTodo.map((e, index) => {
-                  return <div key={index}>{e.To}</div>;
-                })}
+
+                {inputTodo &&
+                  inputTodo.map((item, index) => {
+                    return (
+                      <>
+                        <div
+                          key={index}
+                          draggable
+                          onDragStart={(e) => dragStart(e, index)}
+                          onDragEnter={(e) => dragEnter(e, index)}
+                          onDragEnd={drop}
+                          onDragOver={(e) => e.preventDefault()}
+                          onClick={() => {
+                            console.log(item);
+                          }}
+                        >
+                          {item.To}
+                          {/* 얘가 업데이트 안됨 - 처음 상태 유지 */}
+                        </div>
+                      </>
+                    );
+                  })}
               </div>
 
               <div className="doing">
                 {view && <TodoDropdown />}
-                {inputDoing.map((e, index) => {
-                  return <div key={index}>{e.To}</div>;
-                })}
+                {/* {inputDoing.map((e: any, index: any) => { */}
+                {/* return <div key={index}>{e.To}</div>; */}
+                {/* })} */}
               </div>
 
               <div className="done">
-                {view && <TodoDropdown />}
-                {inputDone.map((e, index) => {
-                  return <div key={index}>{e.To}</div>;
-                })}
+                {/* {view && <TodoDropdown />} */}
+                {/* {inputDone.map((e: any, index: any) => { */}
+                {/* return <div key={index}>{e.To}</div>; */}
+                {/* })} */}
               </div>
             </div>
           </div>
